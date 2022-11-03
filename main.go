@@ -19,7 +19,8 @@ const split_marker = "Game Over:"
 
 var current = ""
 
-func postlog(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func postlog(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+    prefix := p.ByName("prefix")
 	b, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		panic(err)
@@ -28,16 +29,16 @@ func postlog(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	fmt.Println(string(b))
 	current += string(b)
 
-	appendFile(logdir+currentfile, b)
+	appendFile(logdir+prefix+"-"+currentfile, b)
 
 	// If end-of-match marker was added, cycle current log to timestamped file and clear current
 	if strings.Contains(current, split_marker) {
-		err = os.WriteFile(logdir+slug.From(time.Now().Format(time.RFC3339)), []byte(current), 0644)
+		err = os.WriteFile(logdir+prefix+"-"+slug.From(time.Now().Format(time.RFC3339)), []byte(current), 0644)
 		if err != nil {
 			panic(err)
 		}
 		current = ""
-		err = os.WriteFile(logdir+currentfile, []byte(current), 0644)
+		err = os.WriteFile(logdir+prefix+"-"+currentfile, []byte(current), 0644)
 		if err != nil {
 			panic(err)
 		}
@@ -64,7 +65,7 @@ func apiHandler(f func(r *http.Request, p httprouter.Params) (interface{}, error
 }
 
 func appendFile(filename string, b []byte) error {
-	f, err := os.OpenFile(currentfile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
 	}
@@ -82,7 +83,7 @@ func redirect(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 func handler() http.Handler {
 	router := httprouter.New()
 	router.GET("/", redirect)
-	router.POST("/log", postlog)
+	router.POST("/log/:prefix", postlog)
 	router.GET("/api/match/:match", getMatch)
 	router.GET("/api/matchjson/:match", apiHandler(getMatchJSON))
 	router.GET("/api/matchinfo/:match", apiHandler(getMatchInfo))

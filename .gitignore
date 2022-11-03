@@ -1,0 +1,3 @@
+csgo-stats
+logs/*
+!logs/.gitkeep
