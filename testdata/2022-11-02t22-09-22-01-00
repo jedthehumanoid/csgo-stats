@@ -1,0 +1,578 @@
+11/02/2022 - 22:07:09.193 - Log file closed
+11/02/2022 - 22:07:09.193 - Log file started (file "logs/L192_168_000_101_27015_202211022207_000.log") (game "/home/mattias/.local/share/Steam/steamapps/common/Counter-Strike Global Offensive/csgo") (version "8749")
+11/02/2022 - 22:07:09.193 - Loading map "de_dust2"
+11/02/2022 - 22:07:09.193 - server cvars start
+11/02/2022 - 22:07:09.193 - "cash_player_killed_teammate" = "-300"
+11/02/2022 - 22:07:09.193 - "sv_maxspeed" = "320"
+11/02/2022 - 22:07:09.193 - "cash_player_respawn_amount" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_winner_bonus_consecutive_rounds" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_rescued_hostage" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_win_by_defusing_bomb" = "3250"
+11/02/2022 - 22:07:09.193 - "sv_rollangle" = "0"
+11/02/2022 - 22:07:09.193 - "r_AirboatViewZHeight" = "0.0"
+11/02/2022 - 22:07:09.193 - "sv_cheats" = "0"
+11/02/2022 - 22:07:09.193 - "r_VehicleViewDampen" = "1"
+11/02/2022 - 22:07:09.193 - "mp_allowNPCs" = "1"
+11/02/2022 - 22:07:09.193 - "mp_tournament" = "0"
+11/02/2022 - 22:07:09.193 - "sv_vote_issue_pause_match_spec_only" = "0"
+11/02/2022 - 22:07:09.193 - "sv_spec_hear" = "1"
+11/02/2022 - 22:07:09.193 - "cash_player_interact_with_hostage" = "150"
+11/02/2022 - 22:07:09.193 - "mp_flashlight" = "0"
+11/02/2022 - 22:07:09.193 - "mp_maxrounds" = "0"
+11/02/2022 - 22:07:09.193 - "sv_tags" = ""
+11/02/2022 - 22:07:09.193 - "sv_stepsize" = "18"
+11/02/2022 - 22:07:09.193 - "mp_teamlist" = "hgrunt;scientist"
+11/02/2022 - 22:07:09.193 - "sv_alltalk" = "0"
+11/02/2022 - 22:07:09.193 - "mp_footsteps" = "1"
+11/02/2022 - 22:07:09.193 - "sv_noclipaccelerate" = "5"
+11/02/2022 - 22:07:09.193 - "sv_accelerate_debug_speed" = "0"
+11/02/2022 - 22:07:09.193 - "sv_wateraccelerate" = "10"
+11/02/2022 - 22:07:09.193 - "mp_autocrosshair" = "1"
+11/02/2022 - 22:07:09.193 - "mp_stalemate_enable" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_elimination_bomb_map" = "3250"
+11/02/2022 - 22:07:09.193 - "cash_player_get_killed" = "0"
+11/02/2022 - 22:07:09.193 - "mp_roundtime_defuse" = "0"
+11/02/2022 - 22:07:09.193 - "sv_autobuyammo" = "0"
+11/02/2022 - 22:07:09.193 - "sv_rollspeed" = "200"
+11/02/2022 - 22:07:09.193 - "sv_airaccelerate" = "12"
+11/02/2022 - 22:07:09.193 - "mp_teams_unbalance_limit" = "1"
+11/02/2022 - 22:07:09.193 - "sv_show_team_equipment_prohibit" = "0"
+11/02/2022 - 22:07:09.193 - "mp_timelimit" = "5"
+11/02/2022 - 22:07:09.193 - "cash_team_loser_bonus" = "1400"
+11/02/2022 - 22:07:09.193 - "sv_deadtalk" = "0"
+11/02/2022 - 22:07:09.193 - "cash_player_rescued_hostage" = "1000"
+11/02/2022 - 22:07:09.193 - "sv_waterfriction" = "1"
+11/02/2022 - 22:07:09.193 - "sv_competitive_official_5v5" = "0"
+11/02/2022 - 22:07:09.193 - "sv_steamgroup" = ""
+11/02/2022 - 22:07:09.193 - "cash_player_killed_enemy_default" = "300"
+11/02/2022 - 22:07:09.193 - "coop" = "0"
+11/02/2022 - 22:07:09.193 - "mp_respawnwavetime" = "10.0"
+11/02/2022 - 22:07:09.193 - "sv_teamid_overhead" = "1"
+11/02/2022 - 22:07:09.193 - "tv_enable1" = "0"
+11/02/2022 - 22:07:09.193 - "nextlevel" = "de_dust2"
+11/02/2022 - 22:07:09.193 - "sv_stopspeed" = "80"
+11/02/2022 - 22:07:09.193 - "sv_specaccelerate" = "5"
+11/02/2022 - 22:07:09.193 - "deathmatch" = "1"
+11/02/2022 - 22:07:09.193 - "tv_enable" = "0"
+11/02/2022 - 22:07:09.193 - "mp_falldamage" = "0"
+11/02/2022 - 22:07:09.193 - "mp_roundtime_hostage" = "0"
+11/02/2022 - 22:07:09.193 - "mp_freezetime" = "6"
+11/02/2022 - 22:07:09.193 - "mp_teammates_are_enemies" = "0"
+11/02/2022 - 22:07:09.193 - "sv_accelerate_use_weapon_speed" = "1"
+11/02/2022 - 22:07:09.193 - "sv_voiceenable" = "1"
+11/02/2022 - 22:07:09.193 - "sv_teamid_overhead_always_prohibit" = "0"
+11/02/2022 - 22:07:09.193 - "sv_bounce" = "0"
+11/02/2022 - 22:07:09.193 - "r_AirboatViewDampenFreq" = "7.0"
+11/02/2022 - 22:07:09.193 - "mp_disable_respawn_times" = "0"
+11/02/2022 - 22:07:09.193 - "mp_weaponstay" = "0"
+11/02/2022 - 22:07:09.193 - "mp_hostagepenalty" = "10"
+11/02/2022 - 22:07:09.193 - "tv_advertise_watchable" = "0"
+11/02/2022 - 22:07:09.193 - "mp_friendlyfire" = "0"
+11/02/2022 - 22:07:09.193 - "sv_noclipspeed" = "5"
+11/02/2022 - 22:07:09.193 - "cash_team_hostage_interaction" = "500"
+11/02/2022 - 22:07:09.193 - "sv_allchat" = "1"
+11/02/2022 - 22:07:09.193 - "cash_team_win_by_time_running_out_bomb" = "3250"
+11/02/2022 - 22:07:09.193 - "mp_buy_during_immunity" = "0"
+11/02/2022 - 22:07:09.193 - "cash_player_killed_enemy_factor" = "1"
+11/02/2022 - 22:07:09.193 - "r_JeepViewDampenDamp" = "1.0"
+11/02/2022 - 22:07:09.193 - "mp_c4timer" = "40"
+11/02/2022 - 22:07:09.193 - "r_AirboatViewDampenDamp" = "1.0"
+11/02/2022 - 22:07:09.193 - "sv_competitive_minspec" = "1"
+11/02/2022 - 22:07:09.193 - "sv_max_allowed_net_graph" = "1"
+11/02/2022 - 22:07:09.193 - "mp_stalemate_at_timelimit" = "0"
+11/02/2022 - 22:07:09.193 - "mp_limitteams" = "2"
+11/02/2022 - 22:07:09.193 - "sv_footsteps" = "1"
+11/02/2022 - 22:07:09.193 - "sv_vote_issue_kick_allowed" = "1"
+11/02/2022 - 22:07:09.193 - "cash_team_survive_guardian_wave" = "1000"
+11/02/2022 - 22:07:09.193 - "tv_relaypassword" = ""
+11/02/2022 - 22:07:09.193 - "mp_teamplay" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_terrorist_win_bomb" = "3500"
+11/02/2022 - 22:07:09.193 - "cash_team_elimination_hostage_map_t" = "1000"
+11/02/2022 - 22:07:09.193 - "r_JeepViewDampenFreq" = "7.0"
+11/02/2022 - 22:07:09.193 - "sv_specnoclip" = "1"
+11/02/2022 - 22:07:09.193 - "sv_friction" = "5.2"
+11/02/2022 - 22:07:09.193 - "cash_team_win_by_time_running_out_hostage" = "3250"
+11/02/2022 - 22:07:09.193 - "cash_player_bomb_planted" = "300"
+11/02/2022 - 22:07:09.193 - "mp_autoteambalance" = "1"
+11/02/2022 - 22:07:09.193 - "sv_contact" = ""
+11/02/2022 - 22:07:09.193 - "sv_vote_kick_ban_duration" = "15"
+11/02/2022 - 22:07:09.193 - "cash_player_bomb_defused" = "300"
+11/02/2022 - 22:07:09.193 - "mp_roundtime" = "5"
+11/02/2022 - 22:07:09.193 - "sv_kick_ban_duration" = "15"
+11/02/2022 - 22:07:09.193 - "cash_team_planted_bomb_but_defused" = "800"
+11/02/2022 - 22:07:09.193 - "cash_player_killed_hostage" = "-1000"
+11/02/2022 - 22:07:09.193 - "sv_vote_issue_loadbackup_allowed" = "1"
+11/02/2022 - 22:07:09.193 - "nextmode" = ""
+11/02/2022 - 22:07:09.193 - "mp_fraglimit" = "0"
+11/02/2022 - 22:07:09.193 - "cash_team_bonus_shorthanded" = "0"
+11/02/2022 - 22:07:09.193 - "mp_forcerespawn" = "1"
+11/02/2022 - 22:07:09.193 - "mp_buy_anywhere" = "0"
+11/02/2022 - 22:07:09.193 - "sv_accelerate" = "5.5"
+11/02/2022 - 22:07:09.193 - "mp_winlimit" = "0"
+11/02/2022 - 22:07:09.193 - "sv_gravity" = "800"
+11/02/2022 - 22:07:09.193 - "sv_password" = ""
+11/02/2022 - 22:07:09.193 - "cash_team_elimination_hostage_map_ct" = "2000"
+11/02/2022 - 22:07:09.193 - "cash_team_win_by_hostage_rescue" = "3500"
+11/02/2022 - 22:07:09.193 - "sv_vote_issue_loadbackup_spec_only" = "0"
+11/02/2022 - 22:07:09.193 - "r_JeepViewZHeight" = "10.0"
+11/02/2022 - 22:07:09.193 - "cash_team_loser_bonus_consecutive_rounds" = "500"
+11/02/2022 - 22:07:09.193 - "cash_player_damage_hostage" = "-30"
+11/02/2022 - 22:07:09.193 - "cash_team_hostage_alive" = "0"
+11/02/2022 - 22:07:09.193 - "tv_password" = ""
+11/02/2022 - 22:07:09.193 - "sv_specspeed" = "3"
+11/02/2022 - 22:07:09.193 - server cvars end
+11/02/2022 - 22:07:09.193 - Started map "de_dust2" (CRC "-2003525442")
+11/02/2022 - 22:07:09.193 - server_cvar: "nextlevel" ""
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_player_bomb_defused" "200"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_player_bomb_planted" "200"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_player_interact_with_hostage" "300"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_player_killed_enemy_default" "200"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_player_killed_enemy_factor" "0.5"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_elimination_bomb_map" "2700"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_elimination_hostage_map_t" "2000"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_elimination_hostage_map_ct" "2300"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_loser_bonus" "2400"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_loser_bonus_consecutive_rounds" "0"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_planted_bomb_but_defused" "200"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_terrorist_win_bomb" "2700"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_win_by_defusing_bomb" "2700"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_win_by_hostage_rescue" "3000"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_win_by_time_running_out_hostage" "2000"
+11/02/2022 - 22:07:09.193 - server_cvar: "cash_team_win_by_time_running_out_bomb" "2700"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_freezetime" "5"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_friendlyfire" "1"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_maxrounds" "15"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_roundtime" "3"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_roundtime_hostage" "2"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_roundtime_defuse" "2.25"
+11/02/2022 - 22:07:09.193 - server_cvar: "mp_timelimit" "0"
+11/02/2022 - 22:07:09.193 - World triggered "Round_Start"
+11/02/2022 - 22:07:22.959 - "jeddy3<2><STEAM_1:0:25927514><>" connected, address ""
+11/02/2022 - 22:07:23.285 - "jeddy3<2><STEAM_1:0:25927514><>" STEAM USERID validated
+11/02/2022 - 22:07:27.631 - "jeddy3<2><STEAM_1:0:25927514><>" entered the game
+11/02/2022 - 22:07:41.517 - server_cvar: "mp_maxrounds" "3"
+11/02/2022 - 22:07:43.909 - "jeddy3<2><STEAM_1:0:25927514>" switched from team <Unassigned> to <TERRORIST>
+11/02/2022 - 22:07:43.909 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:43.909 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:43.909 - World triggered "Game_Commencing"
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT>" switched from team <Unassigned> to <CT>
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:43.909 - "Crusher<3><BOT><>" entered the game
+11/02/2022 - 22:07:43.944 - "Kurt<4><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.944 - "Kurt<4><BOT>" switched from team <Unassigned> to <TERRORIST>
+11/02/2022 - 22:07:43.944 - "Kurt<4><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:43.944 - "Kurt<4><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:43.944 - "Kurt<4><BOT><>" entered the game
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT>" switched from team <Unassigned> to <CT>
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:43.944 - "Garret<5><BOT><>" entered the game
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT>" switched from team <Unassigned> to <CT>
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:43.986 - "Zach<6><BOT><>" entered the game
+11/02/2022 - 22:07:43.986 - "Stone<7><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.986 - "Stone<7><BOT>" switched from team <Unassigned> to <TERRORIST>
+11/02/2022 - 22:07:43.986 - "Stone<7><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:43.986 - "Stone<7><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:43.986 - "Stone<7><BOT><>" entered the game
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT><>" connected, address ""
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT>" switched from team <Unassigned> to <CT>
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:43.986 - "Rock<8><BOT><>" entered the game
+11/02/2022 - 22:07:44.026 - "Kyle<9><BOT><>" connected, address ""
+11/02/2022 - 22:07:44.026 - "Kyle<9><BOT>" switched from team <Unassigned> to <TERRORIST>
+11/02/2022 - 22:07:44.026 - "Kyle<9><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.026 - "Kyle<9><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.026 - "Kyle<9><BOT><>" entered the game
+11/02/2022 - 22:07:44.026 - "Rip<10><BOT><>" connected, address ""
+11/02/2022 - 22:07:44.026 - "Rip<10><BOT>" switched from team <Unassigned> to <TERRORIST>
+11/02/2022 - 22:07:44.026 - "Rip<10><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.026 - "Rip<10><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.026 - "Rip<10><BOT><>" entered the game
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT><>" connected, address ""
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT>" switched from team <Unassigned> to <CT>
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.050 - "Ringo<11><BOT><>" entered the game
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:07:44.389 - "Kurt<4><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Kurt<4><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Kurt<4><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:07:44.389 - "Stone<7><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Stone<7><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Stone<7><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:07:44.389 - "Kyle<9><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Kyle<9><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Kyle<9><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:44.389 - "Rip<10><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Rip<10><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Rip<10><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" dropped "knife"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:07:44.389 - Starting Freeze period
+11/02/2022 - 22:07:44.389 - "Stone<7><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Stone<7><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Zach<6><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Garret<5><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Rock<8><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Ringo<11><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.389 - "Kurt<4><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Kurt<4><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Crusher<3><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:07:44.389 - "Kyle<9><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Kyle<9><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.389 - "Rip<10><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:07:44.389 - "Rip<10><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:07:44.389 - World triggered "Match_Start" on "de_dust2"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "c4"
+11/02/2022 - 22:07:44.389 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" triggered "Got_The_Bomb"
+11/02/2022 - 22:07:44.389 - MatchStatus: Team "CT" is unset.
+11/02/2022 - 22:07:44.389 - MatchStatus: Team "TERRORIST" is unset.
+11/02/2022 - 22:07:44.389 - MatchStatus: Score: 0:0 on map "de_dust2" RoundsPlayed: 0
+11/02/2022 - 22:07:47.547 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 1000-500 = $500 (tracked) (purchase: weapon_tec9)
+11/02/2022 - 22:07:47.547 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "glock"
+11/02/2022 - 22:07:47.547 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "tec9"
+11/02/2022 - 22:07:47.547 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" purchased "tec9"
+11/02/2022 - 22:07:48.528 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 500-300 = $200 (tracked) (purchase: weapon_hegrenade)
+11/02/2022 - 22:07:48.528 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "hegrenade"
+11/02/2022 - 22:07:48.528 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" purchased "hegrenade"
+11/02/2022 - 22:07:49.388 - World triggered "Round_Start"
+11/02/2022 - 22:07:51.060 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" left buyzone with [ weapon_knife_t weapon_tec9 weapon_c4 weapon_hegrenade kevlar(100) helmet C4 ]
+11/02/2022 - 22:07:51.217 - "Rip<10><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+11/02/2022 - 22:07:51.326 - "Kyle<9><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+11/02/2022 - 22:07:51.811 - "Kurt<4><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+11/02/2022 - 22:07:52.359 - "Ringo<11><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:07:52.515 - "Garret<5><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:07:52.549 - "Crusher<3><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:07:52.639 - "Zach<6><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:07:52.685 - "Rock<8><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:07:52.921 - "Stone<7><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock kevlar(100) helmet ]
+11/02/2022 - 22:07:57.499 - "Kyle<9><BOT><TERRORIST>" [-492 118 -0] attacked "Garret<5><BOT><CT>" [-414 1685 -127] with "glock" (damage "10") (damage_armor "5") (health "90") (armor "94") (hitgroup "stomach")
+11/02/2022 - 22:07:58.280 - "Kyle<9><BOT><TERRORIST>" [-492 118 -0] attacked "Garret<5><BOT><CT>" [-414 1685 -127] with "glock" (damage "10") (damage_armor "5") (health "80") (armor "88") (hitgroup "stomach")
+11/02/2022 - 22:07:58.560 - "Kyle<9><BOT><TERRORIST>" [-492 118 -0] attacked "Garret<5><BOT><CT>" [-414 1685 -127] with "glock" (damage "10") (damage_armor "5") (health "70") (armor "82") (hitgroup "stomach")
+11/02/2022 - 22:07:58.872 - "Kyle<9><BOT><TERRORIST>" [-492 118 -0] attacked "Garret<5><BOT><CT>" [-414 1685 -127] with "glock" (damage "10") (damage_armor "5") (health "60") (armor "76") (hitgroup "stomach")
+11/02/2022 - 22:07:59.421 - "Rip<10><BOT><TERRORIST>" [-492 82 1] attacked "Garret<5><BOT><CT>" [-414 1685 -127] with "glock" (damage "10") (damage_armor "5") (health "50") (armor "70") (hitgroup "stomach")
+11/02/2022 - 22:07:59.670 - "Rip<10><BOT><TERRORIST>" [-492 82 1] attacked "Garret<5><BOT><CT>" [-412 1685 -127] with "glock" (damage "8") (damage_armor "4") (health "42") (armor "65") (hitgroup "chest")
+11/02/2022 - 22:07:59.998 - "Garret<5><BOT><CT>" [-411 1685 -127] attacked "Kurt<4><BOT><TERRORIST>" [-435 665 0] with "hkp2000" (damage "18") (damage_armor "8") (health "82") (armor "91") (hitgroup "stomach")
+11/02/2022 - 22:08:00.435 - "Crusher<3><BOT><CT>" [-346 1573 -126] attacked "Kyle<9><BOT><TERRORIST>" [-492 115 -0] with "hkp2000" (damage "13") (damage_armor "6") (health "87") (armor "93") (hitgroup "chest")
+11/02/2022 - 22:08:01.138 - "Kurt<4><BOT><TERRORIST>" [-340 673 0] attacked "Crusher<3><BOT><CT>" [-370 1522 -126] with "glock" (damage "10") (damage_armor "6") (health "90") (armor "93") (hitgroup "chest")
+11/02/2022 - 22:08:02.278 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "hegrenade"
+11/02/2022 - 22:08:03.266 - "Kurt<4><BOT><TERRORIST>" [-253 722 1] attacked "Crusher<3><BOT><CT>" [-388 1378 -126] with "glock" (damage "11") (damage_armor "6") (health "79") (armor "86") (hitgroup "right arm")
+11/02/2022 - 22:08:03.638 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" threw hegrenade [-463 1525 -109]
+11/02/2022 - 22:08:03.638 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-885 1436 -112] attacked "Crusher<3><BOT><CT>" [-380 1353 -126] with "hegrenade" (damage "14") (damage_armor "4") (health "65") (armor "81") (hitgroup "generic")
+11/02/2022 - 22:08:04.062 - "Rock<8><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:04.547 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-722 1475 -112] attacked "Crusher<3><BOT><CT>" [-313 1339 -123] with "tec9" (damage "24") (damage_armor "1") (health "41") (armor "79") (hitgroup "chest")
+11/02/2022 - 22:08:05.044 - "Kurt<4><BOT><TERRORIST>" [-494 718 4] attacked "Crusher<3><BOT><CT>" [-353 1326 -124] with "glock" (damage "14") (damage_armor "8") (health "27") (armor "70") (hitgroup "stomach")
+11/02/2022 - 22:08:05.171 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-722 1476 -112] attacked "Crusher<3><BOT><CT>" [-359 1325 -124] with "tec9" (damage "99") (damage_armor "5") (health "0") (armor "64") (hitgroup "head")
+11/02/2022 - 22:08:05.171 - "Crusher<3><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:05.171 - "Crusher<3><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:05.171 - "Crusher<3><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:05.171 - "Crusher<3><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:05.171 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-722 1476 -112] killed "Crusher<3><BOT><CT>" [-359 1325 -60] with "tec9" (headshot)
+11/02/2022 - 22:08:05.171 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 200+150 = $350 (tracked)
+11/02/2022 - 22:08:05.547 - "Kurt<4><BOT><TERRORIST>" [-494 718 4] attacked "Ringo<11><BOT><CT>" [-342 1565 -126] with "glock" (damage "17") (damage_armor "0") (health "83") (armor "100") (hitgroup "left leg")
+11/02/2022 - 22:08:05.547 - "Kurt<4><BOT><TERRORIST>" [-494 718 4] attacked "Zach<6><BOT><CT>" [-343 1601 -127] with "glock" (damage "3") (damage_armor "0") (health "97") (armor "100") (hitgroup "left leg")
+11/02/2022 - 22:08:05.794 - "Zach<6><BOT><CT>" [-343 1601 -127] attacked "Kurt<4><BOT><TERRORIST>" [-489 717 1] with "hkp2000" (damage "18") (damage_armor "9") (health "64") (armor "81") (hitgroup "stomach")
+11/02/2022 - 22:08:05.998 - "Ringo<11><BOT><CT>" [-342 1564 -126] attacked "Kurt<4><BOT><TERRORIST>" [-469 713 -1] with "hkp2000" (damage "18") (damage_armor "9") (health "46") (armor "71") (hitgroup "stomach")
+11/02/2022 - 22:08:07.217 - "Ringo<11><BOT><CT>" [-367 1545 -126] attacked "Kurt<4><BOT><TERRORIST>" [-427 815 -11] with "hkp2000" (damage "19") (damage_armor "9") (health "27") (armor "61") (hitgroup "stomach")
+11/02/2022 - 22:08:07.749 - "Ringo<11><BOT><CT>" [-351 1518 -126] attacked "Kurt<4><BOT><TERRORIST>" [-429 858 -22] with "hkp2000" (damage "19") (damage_armor "9") (health "8") (armor "51") (hitgroup "stomach")
+11/02/2022 - 22:08:08.826 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-659 1437 -114] attacked "Ringo<11><BOT><CT>" [-285 1503 -125] with "tec9" (damage "100") (damage_armor "5") (health "0") (armor "94") (hitgroup "head")
+11/02/2022 - 22:08:08.826 - "Ringo<11><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:08.826 - "Ringo<11><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:08.826 - "Ringo<11><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:08.826 - "Ringo<11><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:08.826 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-659 1437 -114] killed "Ringo<11><BOT><CT>" [-285 1503 -79] with "tec9" (headshot)
+11/02/2022 - 22:08:08.826 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 350+150 = $500 (tracked)
+11/02/2022 - 22:08:09.201 - "Kurt<4><BOT><TERRORIST>" [-440 955 -40] attacked "Garret<5><BOT><CT>" [-418 1609 -126] with "glock" (damage "14") (damage_armor "8") (health "28") (armor "56") (hitgroup "stomach")
+11/02/2022 - 22:08:09.282 - "Garret<5><BOT><CT>" [-425 1612 -126] attacked "Kurt<4><BOT><TERRORIST>" [-441 967 -43] with "hkp2000" (damage "2") (damage_armor "1") (health "6") (armor "49") (hitgroup "stomach")
+11/02/2022 - 22:08:09.922 - "Rock<8><BOT><CT>" [-390 1470 -126] attacked "Kurt<4><BOT><TERRORIST>" [-438 1022 -57] with "hkp2000" (damage "20") (damage_armor "9") (health "0") (armor "39") (hitgroup "stomach")
+11/02/2022 - 22:08:09.922 - "Kurt<4><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:08:09.922 - "Kurt<4><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:08:09.922 - "Kurt<4><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:08:09.922 - "Rock<8><BOT><CT>" [-390 1470 -126] killed "Kurt<4><BOT><TERRORIST>" [-438 1022 7] with "hkp2000"
+11/02/2022 - 22:08:09.922 - "Ringo<11><BOT><CT>" assisted killing "Kurt<4><BOT><TERRORIST>"
+11/02/2022 - 22:08:09.922 - "Rock<7><BOT><CT>" money change 1000+150 = $1150 (tracked)
+11/02/2022 - 22:08:09.968 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-636 1376 -112] attacked "Rock<8><BOT><CT>" [-390 1470 -126] with "tec9" (damage "26") (damage_armor "1") (health "74") (armor "98") (hitgroup "chest")
+11/02/2022 - 22:08:10.185 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] attacked "Rock<8><BOT><CT>" [-397 1455 -126] with "tec9" (damage "26") (damage_armor "1") (health "48") (armor "96") (hitgroup "chest")
+11/02/2022 - 22:08:10.344 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] attacked "Rock<8><BOT><CT>" [-394 1450 -126] with "tec9" (damage "26") (damage_armor "1") (health "22") (armor "94") (hitgroup "chest")
+11/02/2022 - 22:08:10.513 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] attacked "Rock<8><BOT><CT>" [-392 1447 -126] with "tec9" (damage "33") (damage_armor "1") (health "0") (armor "92") (hitgroup "stomach")
+11/02/2022 - 22:08:10.513 - "Rock<8><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:10.513 - "Rock<8><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:10.513 - "Rock<8><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:10.513 - "Rock<8><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:10.513 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] killed "Rock<8><BOT><CT>" [-392 1447 -62] with "tec9"
+11/02/2022 - 22:08:10.513 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 500+150 = $650 (tracked)
+11/02/2022 - 22:08:11.204 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] attacked "Garret<5><BOT><CT>" [-407 1573 -126] with "tec9" (damage "25") (damage_armor "1") (health "3") (armor "54") (hitgroup "chest")
+11/02/2022 - 22:08:11.407 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] attacked "Garret<5><BOT><CT>" [-407 1574 -126] with "tec9" (damage "25") (damage_armor "1") (health "0") (armor "52") (hitgroup "chest")
+11/02/2022 - 22:08:11.407 - "Garret<5><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:11.407 - "Garret<5><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:11.407 - "Garret<5><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:11.407 - "Garret<5><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:11.407 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-634 1374 -112] killed "Garret<5><BOT><CT>" [-407 1574 -62] with "tec9"
+11/02/2022 - 22:08:11.407 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 650+150 = $800 (tracked)
+11/02/2022 - 22:08:14.750 - "Stone<7><BOT><TERRORIST>" [-415 565 -2] attacked "Zach<6><BOT><CT>" [-431 1856 -127] with "glock" (damage "11") (damage_armor "6") (health "86") (armor "93") (hitgroup "stomach")
+11/02/2022 - 22:08:14.936 - "Stone<7><BOT><TERRORIST>" [-415 565 -2] attacked "Zach<6><BOT><CT>" [-424 1843 -127] with "glock" (damage "11") (damage_armor "6") (health "75") (armor "86") (hitgroup "stomach")
+11/02/2022 - 22:08:15.233 - "Zach<6><BOT><CT>" [-422 1822 -127] attacked "Stone<7><BOT><TERRORIST>" [-415 565 -2] with "hkp2000" (damage "17") (damage_armor "8") (health "83") (armor "91") (hitgroup "stomach")
+11/02/2022 - 22:08:15.249 - "Stone<7><BOT><TERRORIST>" [-415 565 -2] attacked "Zach<6><BOT><CT>" [-422 1821 -127] with "glock" (damage "11") (damage_armor "6") (health "64") (armor "79") (hitgroup "stomach")
+11/02/2022 - 22:08:18.297 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-455 1378 -126] attacked "Zach<6><BOT><CT>" [-384 1915 -126] with "tec9" (damage "1") (damage_armor "0") (health "63") (armor "78") (hitgroup "chest")
+11/02/2022 - 22:08:18.485 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-455 1378 -126] attacked "Zach<6><BOT><CT>" [-385 1925 -126] with "tec9" (damage "1") (damage_armor "0") (health "62") (armor "77") (hitgroup "right arm")
+11/02/2022 - 22:08:18.857 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-447 1377 -126] attacked "Zach<6><BOT><CT>" [-380 1896 -126] with "tec9" (damage "23") (damage_armor "1") (health "39") (armor "75") (hitgroup "chest")
+11/02/2022 - 22:08:19.063 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-440 1376 -126] attacked "Zach<6><BOT><CT>" [-383 1884 -126] with "tec9" (damage "29") (damage_armor "1") (health "10") (armor "73") (hitgroup "stomach")
+11/02/2022 - 22:08:19.248 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-440 1376 -126] attacked "Zach<6><BOT><CT>" [-395 1878 -127] with "tec9" (damage "23") (damage_armor "1") (health "0") (armor "71") (hitgroup "chest")
+11/02/2022 - 22:08:19.248 - "Zach<6><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:19.248 - "Zach<6><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:19.248 - "Zach<6><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:19.248 - "Zach<6><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:19.248 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-440 1376 -126] killed "Zach<6><BOT><CT>" [-395 1878 -63] with "tec9"
+11/02/2022 - 22:08:19.248 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 800+150 = $950 (tracked)
+11/02/2022 - 22:08:19.248 - Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "1")
+11/02/2022 - 22:08:19.248 - Team "CT" scored "0" with "5" players
+11/02/2022 - 22:08:19.248 - Team "TERRORIST" scored "1" with "5" players
+11/02/2022 - 22:08:19.248 - MatchStatus: Team "CT" is unset.
+11/02/2022 - 22:08:19.248 - MatchStatus: Team "TERRORIST" is unset.
+11/02/2022 - 22:08:19.248 - MatchStatus: Score: 0:1 on map "de_dust2" RoundsPlayed: 1
+11/02/2022 - 22:08:19.248 - World triggered "Round_End"
+11/02/2022 - 22:08:19.248 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 950+2700 = $3650 (tracked)
+11/02/2022 - 22:08:19.248 - "Kurt<3><BOT><TERRORIST>" money change 1000+2700 = $3700 (tracked)
+11/02/2022 - 22:08:19.248 - "Stone<6><BOT><TERRORIST>" money change 1000+2700 = $3700 (tracked)
+11/02/2022 - 22:08:19.248 - "Kyle<8><BOT><TERRORIST>" money change 1000+2700 = $3700 (tracked)
+11/02/2022 - 22:08:19.248 - "Rip<9><BOT><TERRORIST>" money change 1000+2700 = $3700 (tracked)
+11/02/2022 - 22:08:19.248 - "Crusher<2><BOT><CT>" money change 1000+2400 = $3400 (tracked)
+11/02/2022 - 22:08:19.248 - "Garret<4><BOT><CT>" money change 1000+2400 = $3400 (tracked)
+11/02/2022 - 22:08:19.248 - "Zach<5><BOT><CT>" money change 1000+2400 = $3400 (tracked)
+11/02/2022 - 22:08:19.248 - "Rock<7><BOT><CT>" money change 1150+2400 = $3550 (tracked)
+11/02/2022 - 22:08:19.248 - "Ringo<10><BOT><CT>" money change 1000+2400 = $3400 (tracked)
+11/02/2022 - 22:08:29.281 - Starting Freeze period
+11/02/2022 - 22:08:29.281 - "Garret<5><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:08:29.281 - "Garret<5><BOT><CT>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Garret<5><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:08:29.281 - "Ringo<11><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:08:29.281 - "Ringo<11><BOT><CT>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Ringo<11><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:08:29.281 - "Crusher<3><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:08:29.281 - "Crusher<3><BOT><CT>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Crusher<3><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:08:29.281 - "Kurt<4><BOT><TERRORIST>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Kurt<4><BOT><TERRORIST>" picked up "glock"
+11/02/2022 - 22:08:29.281 - "Zach<6><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:08:29.281 - "Zach<6><BOT><CT>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Zach<6><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:08:29.281 - "Rock<8><BOT><CT>" picked up "defuser"
+11/02/2022 - 22:08:29.281 - "Rock<8><BOT><CT>" picked up "knife"
+11/02/2022 - 22:08:29.281 - "Rock<8><BOT><CT>" picked up "hkp2000"
+11/02/2022 - 22:08:29.281 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "c4"
+11/02/2022 - 22:08:29.281 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" triggered "Got_The_Bomb"
+11/02/2022 - 22:08:29.281 - MatchStatus: Team "CT" is unset.
+11/02/2022 - 22:08:29.281 - MatchStatus: Team "TERRORIST" is unset.
+11/02/2022 - 22:08:29.281 - MatchStatus: Score: 0:1 on map "de_dust2" RoundsPlayed: 1
+11/02/2022 - 22:08:29.532 - "Kurt<3><BOT><TERRORIST>" money change 3700-3000 = $700 (tracked) (purchase: weapon_sg556)
+11/02/2022 - 22:08:29.532 - "Kurt<4><BOT><TERRORIST>" picked up "sg556"
+11/02/2022 - 22:08:29.532 - "Kurt<4><BOT><TERRORIST>" purchased "sg556"
+11/02/2022 - 22:08:29.532 - "Zach<5><BOT><CT>" money change 3400-3100 = $300 (tracked) (purchase: weapon_m4a1)
+11/02/2022 - 22:08:29.532 - "Zach<6><BOT><CT>" picked up "m4a1"
+11/02/2022 - 22:08:29.532 - "Zach<6><BOT><CT>" purchased "m4a1"
+11/02/2022 - 22:08:29.532 - "Rip<9><BOT><TERRORIST>" money change 3700-3000 = $700 (tracked) (purchase: weapon_sg556)
+11/02/2022 - 22:08:29.532 - "Rip<10><BOT><TERRORIST>" picked up "sg556"
+11/02/2022 - 22:08:29.532 - "Rip<10><BOT><TERRORIST>" purchased "sg556"
+11/02/2022 - 22:08:29.532 - "Rip<9><BOT><TERRORIST>" money change 700-300 = $400 (tracked) (purchase: weapon_hegrenade)
+11/02/2022 - 22:08:29.532 - "Rip<10><BOT><TERRORIST>" picked up "hegrenade"
+11/02/2022 - 22:08:29.532 - "Rip<10><BOT><TERRORIST>" purchased "hegrenade"
+11/02/2022 - 22:08:29.547 - "Crusher<2><BOT><CT>" money change 3400-2000 = $1400 (tracked) (purchase: weapon_xm1014)
+11/02/2022 - 22:08:29.547 - "Crusher<3><BOT><CT>" picked up "xm1014"
+11/02/2022 - 22:08:29.547 - "Crusher<3><BOT><CT>" purchased "xm1014"
+11/02/2022 - 22:08:29.547 - "Garret<4><BOT><CT>" money change 3400-3300 = $100 (tracked) (purchase: weapon_aug)
+11/02/2022 - 22:08:29.547 - "Garret<5><BOT><CT>" picked up "aug"
+11/02/2022 - 22:08:29.547 - "Garret<5><BOT><CT>" purchased "aug"
+11/02/2022 - 22:08:29.547 - "Stone<6><BOT><TERRORIST>" money change 3700-3000 = $700 (tracked) (purchase: weapon_sg556)
+11/02/2022 - 22:08:29.547 - "Stone<7><BOT><TERRORIST>" picked up "sg556"
+11/02/2022 - 22:08:29.547 - "Stone<7><BOT><TERRORIST>" purchased "sg556"
+11/02/2022 - 22:08:29.547 - "Stone<6><BOT><TERRORIST>" money change 700-300 = $400 (tracked) (purchase: weapon_hegrenade)
+11/02/2022 - 22:08:29.547 - "Stone<7><BOT><TERRORIST>" picked up "hegrenade"
+11/02/2022 - 22:08:29.547 - "Stone<7><BOT><TERRORIST>" purchased "hegrenade"
+11/02/2022 - 22:08:29.547 - "Ringo<10><BOT><CT>" money change 3400-3300 = $100 (tracked) (purchase: weapon_aug)
+11/02/2022 - 22:08:29.547 - "Ringo<11><BOT><CT>" picked up "aug"
+11/02/2022 - 22:08:29.547 - "Ringo<11><BOT><CT>" purchased "aug"
+11/02/2022 - 22:08:29.624 - "Rock<7><BOT><CT>" money change 3550-2000 = $1550 (tracked) (purchase: weapon_xm1014)
+11/02/2022 - 22:08:29.624 - "Rock<8><BOT><CT>" picked up "xm1014"
+11/02/2022 - 22:08:29.624 - "Rock<8><BOT><CT>" purchased "xm1014"
+11/02/2022 - 22:08:29.624 - "Rock<7><BOT><CT>" money change 1550-300 = $1250 (tracked) (purchase: weapon_hegrenade)
+11/02/2022 - 22:08:29.624 - "Rock<8><BOT><CT>" picked up "hegrenade"
+11/02/2022 - 22:08:29.624 - "Rock<8><BOT><CT>" purchased "hegrenade"
+11/02/2022 - 22:08:29.828 - "Kyle<8><BOT><TERRORIST>" money change 3700-1700 = $2000 (tracked) (purchase: weapon_ssg08)
+11/02/2022 - 22:08:29.828 - "Kyle<9><BOT><TERRORIST>" picked up "ssg08"
+11/02/2022 - 22:08:29.828 - "Kyle<9><BOT><TERRORIST>" purchased "ssg08"
+11/02/2022 - 22:08:29.828 - "Kyle<8><BOT><TERRORIST>" money change 2000-300 = $1700 (tracked) (purchase: weapon_smokegrenade)
+11/02/2022 - 22:08:29.828 - "Kyle<9><BOT><TERRORIST>" picked up "smokegrenade"
+11/02/2022 - 22:08:29.828 - "Kyle<9><BOT><TERRORIST>" purchased "smokegrenade"
+11/02/2022 - 22:08:31.486 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 3650-2700 = $950 (tracked) (purchase: weapon_ak47)
+11/02/2022 - 22:08:31.486 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "ak47"
+11/02/2022 - 22:08:31.486 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" purchased "ak47"
+11/02/2022 - 22:08:33.188 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 950-400 = $550 (tracked) (purchase: weapon_molotov)
+11/02/2022 - 22:08:33.188 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "molotov"
+11/02/2022 - 22:08:33.188 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" purchased "molotov"
+11/02/2022 - 22:08:33.551 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 550-300 = $250 (tracked) (purchase: weapon_hegrenade)
+11/02/2022 - 22:08:33.551 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" picked up "hegrenade"
+11/02/2022 - 22:08:33.551 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" purchased "hegrenade"
+11/02/2022 - 22:08:34.282 - World triggered "Round_Start"
+11/02/2022 - 22:08:35.516 - "Kyle<9><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_ssg08 weapon_smokegrenade kevlar(100) helmet ]
+11/02/2022 - 22:08:35.873 - "Zach<6><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_m4a1 defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:36.591 - "Crusher<3><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_xm1014 defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:36.671 - "Rip<10><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+11/02/2022 - 22:08:36.717 - "Ringo<11><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_aug defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:36.983 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" left buyzone with [ weapon_knife_t weapon_tec9 weapon_c4 weapon_ak47 weapon_molotov weapon_hegrenade kevlar(100) helmet C4 ]
+11/02/2022 - 22:08:37.404 - "Stone<7><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_sg556 weapon_hegrenade kevlar(100) helmet ]
+11/02/2022 - 22:08:37.420 - "Garret<5><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_aug defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:37.436 - "Rock<8><BOT><CT>" left buyzone with [ weapon_knife weapon_hkp2000 weapon_xm1014 weapon_hegrenade defuser kevlar(100) helmet ]
+11/02/2022 - 22:08:38.546 - "Kurt<4><BOT><TERRORIST>" left buyzone with [ weapon_knife_t weapon_glock weapon_sg556 kevlar(100) helmet ]
+11/02/2022 - 22:08:40.124 - "Stone<7><BOT><TERRORIST>" dropped "hegrenade"
+11/02/2022 - 22:08:41.467 - "Stone<7><BOT><TERRORIST>" threw hegrenade [-348 706 15]
+11/02/2022 - 22:08:45.967 - "Ringo<11><BOT><CT>" [972 1091 1] attacked "Rip<10><BOT><TERRORIST>" [615 722 1] with "aug" (damage "30") (damage_armor "1") (health "70") (armor "98") (hitgroup "stomach")
+11/02/2022 - 22:08:46.185 - "Ringo<11><BOT><CT>" [966 1091 1] attacked "Rip<10><BOT><TERRORIST>" [622 739 1] with "aug" (damage "30") (damage_armor "1") (health "40") (armor "96") (hitgroup "stomach")
+11/02/2022 - 22:08:46.481 - "Rip<10><BOT><TERRORIST>" dropped "hegrenade"
+11/02/2022 - 22:08:47.061 - "Ringo<11><BOT><CT>" [945 1124 1] attacked "Rip<10><BOT><TERRORIST>" [651 755 1] with "aug" (damage "30") (damage_armor "1") (health "10") (armor "94") (hitgroup "stomach")
+11/02/2022 - 22:08:47.403 - "Ringo<11><BOT><CT>" [945 1124 1] attacked "Rip<10><BOT><TERRORIST>" [652 749 1] with "aug" (damage "30") (damage_armor "1") (health "0") (armor "92") (hitgroup "stomach")
+11/02/2022 - 22:08:47.403 - "Rip<10><BOT><TERRORIST>" dropped "sg556"
+11/02/2022 - 22:08:47.403 - "Rip<10><BOT><TERRORIST>" dropped "vesthelm"
+11/02/2022 - 22:08:47.403 - "Rip<10><BOT><TERRORIST>" dropped "knife"
+11/02/2022 - 22:08:47.403 - "Rip<10><BOT><TERRORIST>" dropped "glock"
+11/02/2022 - 22:08:47.403 - "Ringo<11><BOT><CT>" [945 1124 1] killed "Rip<10><BOT><TERRORIST>" [652 749 65] with "aug"
+11/02/2022 - 22:08:47.403 - "Ringo<10><BOT><CT>" money change 100+150 = $250 (tracked)
+11/02/2022 - 22:08:47.825 - "Rip<10><BOT><TERRORIST>" threw hegrenade [1080 1204 3]
+11/02/2022 - 22:08:47.825 - "Rip<10><BOT><TERRORIST>" [652 749 65] attacked "Ringo<11><BOT><CT>" [918 1120 1] with "hegrenade" (damage "12") (damage_armor "4") (health "88") (armor "95") (hitgroup "generic")
+11/02/2022 - 22:08:49.046 - "Kurt<4><BOT><TERRORIST>" [617 683 1] attacked "Ringo<11><BOT><CT>" [989 1110 1] with "sg556" (damage "29") (damage_armor "0") (health "59") (armor "95") (hitgroup "right arm")
+11/02/2022 - 22:08:51.357 - "Kurt<4><BOT><TERRORIST>" [614 686 1] attacked "Ringo<11><BOT><CT>" [907 1004 0] with "sg556" (damage "29") (damage_armor "0") (health "30") (armor "95") (hitgroup "chest")
+11/02/2022 - 22:08:51.466 - "Ringo<11><BOT><CT>" [901 1003 0] attacked "Kurt<4><BOT><TERRORIST>" [617 688 1] with "aug" (damage "30") (damage_armor "1") (health "70") (armor "98") (hitgroup "stomach")
+11/02/2022 - 22:08:54.668 - "Rock<8><BOT><CT>" dropped "hegrenade"
+11/02/2022 - 22:08:55.312 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-2000 1709 32] attacked "Garret<5><BOT><CT>" [-1366 2558 5] with "ak47" (damage "106") (damage_armor "15") (health "0") (armor "84") (hitgroup "head")
+11/02/2022 - 22:08:55.312 - "Garret<5><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:08:55.312 - "Garret<5><BOT><CT>" dropped "aug"
+11/02/2022 - 22:08:55.312 - "Garret<5><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:08:55.312 - "Garret<5><BOT><CT>" dropped "knife"
+11/02/2022 - 22:08:55.312 - "Garret<5><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:08:55.312 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-2000 1709 32] killed "Garret<5><BOT><CT>" [-1366 2558 51] with "ak47" (headshot)
+11/02/2022 - 22:08:55.312 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 250+150 = $400 (tracked)
+11/02/2022 - 22:08:56.014 - "Rock<8><BOT><CT>" threw hegrenade [-325 1718 -103]
+11/02/2022 - 22:09:03.357 - "Kurt<4><BOT><TERRORIST>" [590 719 1] attacked "Ringo<11><BOT><CT>" [674 776 0] with "sg556" (damage "37") (damage_armor "0") (health "0") (armor "95") (hitgroup "stomach")
+11/02/2022 - 22:09:03.357 - "Ringo<11><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:09:03.357 - "Ringo<11><BOT><CT>" dropped "aug"
+11/02/2022 - 22:09:03.357 - "Ringo<11><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:09:03.357 - "Ringo<11><BOT><CT>" dropped "knife"
+11/02/2022 - 22:09:03.357 - "Ringo<11><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:09:03.357 - "Kurt<4><BOT><TERRORIST>" [590 719 1] killed "Ringo<11><BOT><CT>" [674 776 64] with "sg556"
+11/02/2022 - 22:09:03.357 - "Kurt<3><BOT><TERRORIST>" money change 700+150 = $850 (tracked)
+11/02/2022 - 22:09:06.186 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2277 -2] attacked "Rock<8><BOT><CT>" [-1348 2174 2] with "ak47" (damage "27") (damage_armor "3") (health "73") (armor "96") (hitgroup "chest")
+11/02/2022 - 22:09:06.296 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2276 -2] attacked "Rock<8><BOT><CT>" [-1357 2173 2] with "ak47" (damage "34") (damage_armor "4") (health "39") (armor "91") (hitgroup "stomach")
+11/02/2022 - 22:09:06.593 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2276 -2] attacked "Rock<8><BOT><CT>" [-1355 2189 2] with "ak47" (damage "27") (damage_armor "3") (health "12") (armor "87") (hitgroup "chest")
+11/02/2022 - 22:09:06.655 - "Rock<8><BOT><CT>" [-1354 2194 2] attacked "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2276 -2] with "xm1014" (damage "15") (damage_armor "1") (health "85") (armor "98") (hitgroup "stomach")
+11/02/2022 - 22:09:06.685 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2276 -2] attacked "Rock<8><BOT><CT>" [-1354 2193 2] with "ak47" (damage "27") (damage_armor "3") (health "0") (armor "83") (hitgroup "chest")
+11/02/2022 - 22:09:06.685 - "Rock<8><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:09:06.685 - "Rock<8><BOT><CT>" dropped "xm1014"
+11/02/2022 - 22:09:06.685 - "Rock<8><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:09:06.685 - "Rock<8><BOT><CT>" dropped "knife"
+11/02/2022 - 22:09:06.685 - "Rock<8><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:09:06.685 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" [-1682 2276 -2] killed "Rock<8><BOT><CT>" [-1354 2193 66] with "ak47"
+11/02/2022 - 22:09:06.685 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 400+150 = $550 (tracked)
+11/02/2022 - 22:09:07.155 - "Crusher<3><BOT><CT>" [1571 2192 -9] attacked "Kyle<9><BOT><TERRORIST>" [-387 2095 -129] with "hkp2000" (damage "12") (damage_armor "5") (health "88") (armor "94") (hitgroup "chest")
+11/02/2022 - 22:09:08.716 - "Kurt<4><BOT><TERRORIST>" dropped "sg556"
+11/02/2022 - 22:09:08.716 - "Kurt<4><BOT><TERRORIST>" picked up "aug"
+11/02/2022 - 22:09:09.889 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" triggered "Bomb_Begin_Plant" at bombsite B
+11/02/2022 - 22:09:13.014 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 550+200 = $750 (tracked)
+11/02/2022 - 22:09:13.014 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" triggered "Planted_The_Bomb" at bombsite B
+11/02/2022 - 22:09:13.014 - "jeddy3<2><STEAM_1:0:25927514><TERRORIST>" dropped "c4"
+11/02/2022 - 22:09:13.435 - "Kyle<9><BOT><TERRORIST>" [-312 2230 -124] attacked "Crusher<3><BOT><CT>" [1625 1967 1] with "ssg08" (damage "42") (damage_armor "3") (health "58") (armor "96") (hitgroup "stomach")
+11/02/2022 - 22:09:15.251 - "Kyle<9><BOT><TERRORIST>" [-312 2230 -124] attacked "Crusher<3><BOT><CT>" [1456 2046 -10] with "ssg08" (damage "87") (damage_armor "7") (health "0") (armor "88") (hitgroup "stomach")
+11/02/2022 - 22:09:15.251 - "Crusher<3><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:09:15.251 - "Crusher<3><BOT><CT>" dropped "xm1014"
+11/02/2022 - 22:09:15.251 - "Crusher<3><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:09:15.251 - "Crusher<3><BOT><CT>" dropped "knife"
+11/02/2022 - 22:09:15.251 - "Crusher<3><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:09:15.251 - "Kyle<9><BOT><TERRORIST>" [-312 2230 -124] killed "Crusher<3><BOT><CT>" [1456 2046 54] with "ssg08"
+11/02/2022 - 22:09:15.251 - "Kyle<8><BOT><TERRORIST>" money change 1700+150 = $1850 (tracked)
+11/02/2022 - 22:09:21.294 - "Zach<6><BOT><CT>" [731 2276 -53] attacked "Kurt<4><BOT><TERRORIST>" [1327 2041 0] with "m4a1" (damage "27") (damage_armor "5") (health "43") (armor "92") (hitgroup "stomach")
+11/02/2022 - 22:09:21.327 - "Kurt<4><BOT><TERRORIST>" [1327 2041 0] attacked "Zach<6><BOT><CT>" [733 2277 -53] with "aug" (damage "20") (damage_armor "0") (health "80") (armor "100") (hitgroup "right leg")
+11/02/2022 - 22:09:21.452 - "Kurt<4><BOT><TERRORIST>" [1325 2036 1] attacked "Zach<6><BOT><CT>" [738 2282 -51] with "aug" (damage "20") (damage_armor "0") (health "60") (armor "100") (hitgroup "right leg")
+11/02/2022 - 22:09:22.075 - "Kurt<4><BOT><TERRORIST>" [1310 2001 1] attacked "Zach<6><BOT><CT>" [739 2284 -51] with "aug" (damage "30") (damage_armor "1") (health "30") (armor "98") (hitgroup "stomach")
+11/02/2022 - 22:09:22.202 - "Zach<6><BOT><CT>" [739 2284 -51] attacked "Kurt<4><BOT><TERRORIST>" [1310 2001 1] with "m4a1" (damage "23") (damage_armor "0") (health "20") (armor "92") (hitgroup "right leg")
+11/02/2022 - 22:09:22.233 - "Kurt<4><BOT><TERRORIST>" [1310 2001 1] attacked "Zach<6><BOT><CT>" [740 2284 -51] with "aug" (damage "30") (damage_armor "1") (health "0") (armor "96") (hitgroup "stomach")
+11/02/2022 - 22:09:22.233 - "Zach<6><BOT><CT>" dropped "defuser"
+11/02/2022 - 22:09:22.233 - "Zach<6><BOT><CT>" dropped "m4a1"
+11/02/2022 - 22:09:22.233 - "Zach<6><BOT><CT>" dropped "vesthelm"
+11/02/2022 - 22:09:22.233 - "Zach<6><BOT><CT>" dropped "knife"
+11/02/2022 - 22:09:22.233 - "Zach<6><BOT><CT>" dropped "hkp2000"
+11/02/2022 - 22:09:22.233 - "Kurt<4><BOT><TERRORIST>" [1310 2001 1] killed "Zach<6><BOT><CT>" [740 2284 13] with "aug"
+11/02/2022 - 22:09:22.233 - "Kurt<3><BOT><TERRORIST>" money change 850+150 = $1000 (tracked)
+11/02/2022 - 22:09:22.233 - Team "TERRORIST" triggered "SFUI_Notice_Terrorists_Win" (CT "0") (T "2")
+11/02/2022 - 22:09:22.233 - Team "CT" scored "0" with "5" players
+11/02/2022 - 22:09:22.233 - Team "TERRORIST" scored "2" with "5" players
+11/02/2022 - 22:09:22.233 - MatchStatus: Team "CT" is unset.
+11/02/2022 - 22:09:22.233 - MatchStatus: Team "TERRORIST" is unset.
+11/02/2022 - 22:09:22.233 - MatchStatus: Score: 0:2 on map "de_dust2" RoundsPlayed: 2
+11/02/2022 - 22:09:22.233 - World triggered "Round_End"
+11/02/2022 - 22:09:22.233 - "jeddy3<1><STEAM_1:0:25927514><TERRORIST>" money change 750+2700 = $3450 (tracked)
+11/02/2022 - 22:09:22.233 - "Kurt<3><BOT><TERRORIST>" money change 1000+2700 = $3700 (tracked)
+11/02/2022 - 22:09:22.233 - "Stone<6><BOT><TERRORIST>" money change 400+2700 = $3100 (tracked)
+11/02/2022 - 22:09:22.233 - "Kyle<8><BOT><TERRORIST>" money change 1850+2700 = $4550 (tracked)
+11/02/2022 - 22:09:22.233 - "Rip<9><BOT><TERRORIST>" money change 400+2700 = $3100 (tracked)
+11/02/2022 - 22:09:22.233 - "Crusher<2><BOT><CT>" money change 1400+2400 = $3800 (tracked)
+11/02/2022 - 22:09:22.233 - "Garret<4><BOT><CT>" money change 100+2400 = $2500 (tracked)
+11/02/2022 - 22:09:22.233 - "Zach<5><BOT><CT>" money change 300+2400 = $2700 (tracked)
+11/02/2022 - 22:09:22.233 - "Rock<7><BOT><CT>" money change 1250+2400 = $3650 (tracked)
+11/02/2022 - 22:09:22.233 - "Ringo<10><BOT><CT>" money change 250+2400 = $2650 (tracked)
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {quietest},	Garret<4>,	VALUE: 54.000000,	POS: 1,	SCORE: 32.200001
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {livetime},	Zach<5>,	VALUE: 76.000000,	POS: 1,	SCORE: 2.133333
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {pistolkills},	Rock<7>,	VALUE: 1.000000,	POS: 1,	SCORE: 5.714285
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {firstkills},	Ringo<10>,	VALUE: 1.000000,	POS: 1,	SCORE: 31.111115
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {gimme_05},	Crusher<2>,	VALUE: 0.000000,	POS: 1,	SCORE: 0.000000
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {mvps},	jeddy3<1>,	VALUE: 2.000000,	POS: 1,	SCORE: 80.000000
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {quietest},	Kurt<3>,	VALUE: 98.000000,	POS: 1,	SCORE: 1.400000
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {sniperkills},	Kyle<8>,	VALUE: 1.000000,	POS: 1,	SCORE: 5.526316
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {cashspent},	Rip<9>,	VALUE: 3300.000000,	POS: 2,	SCORE: 2.785714
+11/02/2022 - 22:09:22.233 - ACCOLADE, FINAL: {roundssurvived},	Stone<6>,	VALUE: 2.000000,	POS: 2,	SCORE: 50.000000
+11/02/2022 - 22:09:22.233 - MatchStatus: Team "CT" is unset.
+11/02/2022 - 22:09:22.233 - MatchStatus: Team "TERRORIST" is unset.
+11/02/2022 - 22:09:22.233 - MatchStatus: Score: 0:2 on map "de_dust2" RoundsPlayed: 2
+11/02/2022 - 22:09:22.233 - Game Over: casual mg_de_dust2 de_dust2 score 0:2 after 2 min
+11/02/2022 - 22:09:22.233 - World triggered "Round_Start"
