@@ -86,4 +86,7 @@ function parseLine(line) {
 		border:  1px solid red;
 		width:  100px;
 	}
+	.match {
+		cursor: pointer;
+	}
 </style>
