@@ -50,7 +50,7 @@
           ><th style="width: 200px;">Date</th></tr
         >
         <tr
-          ><td class="center">{matchinfo.map}</td><td class="center" /><td
+          ><td class="center">{matchinfo.map}</td><td class="center">{matchinfo.Duration} minutes</td><td
             class="center"
             >{selected.split("-").slice(1).join("-").slice(0, 10)}</td
           ></tr

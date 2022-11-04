@@ -24,6 +24,7 @@ type Match struct {
 	Players  []Player
 	T_Score  int
 	CT_Score int
+	Duration int
 }
 
 func (match *Match) Messages() []csgolog.Message {
@@ -88,6 +89,7 @@ func Parse(s string) Match {
 		case "GameOver":
 			msg := msg.(csgolog.GameOver)
 			ret.Mode = msg.Mode
+			ret.Duration = msg.Duration
 
 		// PlayerPickerUp seems to trigger for every player, so using this for listening for players
 		case "PlayerPickedUp":
@@ -129,8 +131,9 @@ func Parse(s string) Match {
 					ret.Players[i].Score += 1
 				}
 			}
-
 		}
+
+
 	}
 	return ret
 }
