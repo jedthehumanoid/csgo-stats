@@ -20,7 +20,7 @@ const split_marker = "Game Over:"
 var current = ""
 
 func postlog(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-    prefix := p.ByName("prefix")
+	prefix := p.ByName("prefix")
 	b, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		panic(err)
@@ -84,11 +84,11 @@ func handler() http.Handler {
 	router := httprouter.New()
 	router.GET("/", redirect)
 	router.POST("/log/:prefix", postlog)
-	router.GET("/api/match/:match", getMatch)
-	router.GET("/api/matchjson/:match", apiHandler(getMatchJSON))
-	router.GET("/api/matchinfo/:match", apiHandler(getMatchInfo))
+	router.GET("/api/match/:match/raw", getMatch)
+	router.GET("/api/match/:match/json", apiHandler(getMatchJSON))
+	router.GET("/api/match/:match/info", apiHandler(getMatchInfo))
 
-    router.GET("/api/matches", apiHandler(getMatches))
+	router.GET("/api/matches", apiHandler(getMatches))
 	router.ServeFiles("/gui/*filepath", http.Dir("svelte/public"))
 	return router
 }

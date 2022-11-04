@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"io/ioutil"
+	"strings"
 	"net/http"
 	"os"
 )
@@ -27,7 +28,7 @@ func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
 	}
 
 	for _, f := range files {
-		if f.Name() != "current" && f.Name() != ".gitkeep" {
+		if !strings.HasSuffix(f.Name(), "-current") && f.Name() != ".gitkeep" {
 			b, err := os.ReadFile("logs/" + f.Name())
 			if err != nil {
 				return nil, err

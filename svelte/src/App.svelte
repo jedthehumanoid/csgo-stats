@@ -1,8 +1,9 @@
 <script>
+  import MatchButton from "./MatchButton.svelte";
   let matches = [];
   let matchinfo = {};
-  let ct = 0;
-  let t = 0;
+  let selected = "";
+
   fetch(`/api/matches`).then((response) => {
     response.json().then((json) => {
       matches = json;
@@ -10,69 +11,82 @@
   });
 
   function selectMatch(m) {
-    fetch(`/api/matchinfo/${m}`).then((response) => {
+    selected = m;
+    fetch(`/api/match/${m}/info`).then((response) => {
       response.json().then((json) => {
         matchinfo = json;
         console.log(matchinfo);
       });
     });
   }
+
+  function sortPlayers(players, team) {
+    return players
+      .filter((player) => player.Team === team)
+      .sort((a, b) => (a.Score < b.Score ? 1 : -1));
+  }
 </script>
 
 <main>
   <div id="navigation">
     {#each matches as match}
-      <div class="match" on:click={() => selectMatch(match.filename)}>
-        <img
-          class="floatleft"
-          src="map-icons/map_icon_{match.map}.svg"
-          style="width: 50px;"
-        />
-        <div class="floatleft">
-          <span class="ct">{match.ct_score}</span> - <span class="terrorist">{match.t_score}</span><br
-          />{match.filename.slice(0, 10)}
-        </div>
-      </div>
+      <MatchButton
+        {match}
+        selected={match.filename === selected}
+        on:click={() => selectMatch(match.filename)}
+        on:keypress={() => selectMatch(match.filename)}
+      />
     {/each}
   </div>
   <div id="main">
     {#if matchinfo.Players}
-      Map: {matchinfo.map}
-      <table class="ct">
+      <table id="infotable">
+        <tr
+          ><th rowspan="2" class="logo"
+            ><img src="map-icons/map_icon_{matchinfo.map}.svg" alt="" /></th
+          ><th style="width: 150px;">Map</th><th style="width: 100px;"
+            >Duration</th
+          ><th style="width: 200px;">Date</th></tr
+        >
+        <tr
+          ><td class="center">{matchinfo.map}</td><td class="center" /><td
+            class="center"
+            >{selected.split("-").slice(1).join("-").slice(0, 10)}</td
+          ></tr
+        >
+      </table>
+
+      <table class="stats">
         <tr>
-          <th
-            class="tableside"
-            rowspan={matchinfo.Players.filter((player) => player.Team === "CT")
-              .length + 1}>CT<br />{matchinfo.CT_Score}</th
-          ><th style="width: 20em;" /><th style="width: 4em;">K</th><th
-            style="width: 4em;">A</th
-          ><th style="width: 4em;">D</th>
-          <th style="width: 4em;">Score</th>
+          <th /><th style="width: 20em;" /><th style="width: 3em;">K</th><th
+            style="width: 3em;">A</th
+          ><th style="width: 3em;">D</th>
+          <th style="width: 3em;">Score</th>
         </tr>
-        {#each matchinfo.Players.filter((player) => player.Team === "CT").sort( (a, b) => (a.Score < b.Score ? 1 : -1) ) as player}
-          <tr>
+        <tr class="ct"
+          ><td
+            class="tableside"
+            rowspan={sortPlayers(matchinfo.Players, "CT").length + 1}
+            >CT<br />{matchinfo.CT_Score}</td
+          ></tr
+        >
+        {#each sortPlayers(matchinfo.Players, "CT") as player}
+          <tr class="ct">
             <td>{player.Name}</td><td class="center">{player.Kills}</td><td
               class="center">{player.Assists}</td
             ><td class="center">{player.Deaths}</td>
             <td class="center">{player.Score}</td>
           </tr>
         {/each}
-      </table>
-      <div class="spacer" />
-      <table class="terrorist">
-        <tr>
-          <th
+        <tr class="terrorist">
+          <td
             class="tableside"
-            rowspan={matchinfo.Players.filter(
-              (player) => player.Team === "TERRORIST"
-            ).length + 1}>T<br /> {matchinfo.T_Score}</th
-          ><th style="width: 20em;" /><th style="width: 4em;" /><th
-            style="width: 4em;"
-          /><th style="width: 4em;" />
-          <th style="width: 4em;" />
+            rowspan={sortPlayers(matchinfo.Players, "CT").length + 1}
+            >T<br /> {matchinfo.T_Score}</td
+          ><td><br /></td>
         </tr>
-        {#each matchinfo.Players.filter((player) => player.Team === "TERRORIST").sort( (a, b) => (a.Score < b.Score ? 1 : -1) ) as player}
-          <tr>
+        {#each sortPlayers(matchinfo.Players, "TERRORIST") as player}
+          <tr class="terrorist">
             <td>{player.Name}</td><td class="center">{player.Kills}</td><td
               class="center">{player.Assists}</td
             ><td class="center">{player.Deaths}</td>
@@ -92,10 +106,9 @@
     top: 0;
     bottom: 0;
     background-color: #ffffff44;
-    padding: 10px;
   }
 
-  #navigation div {
+  #navigation {
     display: block;
   }
 
@@ -105,13 +118,7 @@
     padding: 75px;
   }
 
-  .match {
-    cursor: pointer;
-    height: 75px;
-    border-bottom: 1px solid #000000;
-  }
-
-  table {
+  table.stats {
     border-collapse: collapse;
   }
   .center {
@@ -124,9 +131,6 @@
     font-size: 150%;
   }
 
-  .spacer {
-    height: 1em;
-  }
   .ct {
     color: #b5d4ee;
   }
@@ -135,11 +139,17 @@
     color: #ead18a;
   }
 
-  .floatleft {
-    float: left;
+  tr.terrorist,
+  tr.ct {
+    border-bottom: 2px solid #ffffff11;
   }
 
-  tr {
-    border-bottom: 2px solid #ffffff11;
+  #infotable {
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 50px;
   }
 </style>
