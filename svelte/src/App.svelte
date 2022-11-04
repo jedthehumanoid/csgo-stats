@@ -27,8 +27,7 @@
   }
 </script>
 
-<main>
-  <div id="navigation">
+<main><div id="navigation">
     {#each matches as match}
       <MatchButton
         {match}
@@ -37,9 +36,11 @@
         on:keypress={() => selectMatch(match.filename)}
       />
     {/each}
-  </div>
-  <div id="main">
+  </div><span style="opacity:0;">Why do i need this?</span> <div id="main">
     {#if matchinfo.Players}
+    <a href="/api/match/{selected}/json">json</a>
+    <a href="/api/match/{selected}/raw">raw</a>
+    
       <table id="infotable">
         <tr
           ><th rowspan="2" class="logo"
@@ -115,7 +116,6 @@
   #main {
     margin-left: 300px;
     color: #ccc;
-    padding: 75px;
   }
 
   table.stats {
@@ -151,5 +151,14 @@
 
   img {
     width: 50px;
+  }
+
+  a {
+    color: #ffffffcc;
+    font-size: 80%;
+    text-decoration: none;
+    border: 1px solid #ffffff55;
+    border-radius: 3px;
+    padding: 2px;
   }
 </style>
