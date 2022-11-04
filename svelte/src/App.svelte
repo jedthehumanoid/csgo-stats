@@ -82,7 +82,7 @@
         <tr class="terrorist">
           <td
             class="tableside"
-            rowspan={sortPlayers(matchinfo.Players, "CT").length + 1}
+            rowspan={sortPlayers(matchinfo.Players, "TERRORIST").length + 1}
             >T<br /> {matchinfo.T_Score}</td
           ><td><br /></td>
         </tr>
