@@ -7,12 +7,19 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"github.com/janstuemmel/csgo-log"
 )
 
 // getMatches returns list of saved matches
 func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
-	ret := []string{}
+	type mapInfo struct{
+		Map string `json:"map"`
+		Filename string `json:"filename"`
+		CT_Score int `json:"ct_score"`
+		T_Score int `json:"t_score"`
+	}
+
+	ret := []mapInfo{}
+		
 
 	files, err := ioutil.ReadDir("logs")
 	if err != nil {
@@ -21,7 +28,13 @@ func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
 
 	for _, f := range files {
 		if f.Name() != "current" && f.Name() != ".gitkeep" {
-			ret = append(ret, f.Name())
+			b, err := os.ReadFile("logs/" + f.Name())
+			if err != nil {
+				return nil, err
+			}
+
+			match := csgo.Parse(string(b))
+			ret = append(ret, mapInfo{match.Map, f.Name(), match.CT_Score, match.T_Score})
 		}
 	}
 
@@ -41,39 +54,23 @@ func getMatch(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 
 // getMatchJSON returns json list of parsed log messages
 func getMatchJSON(r *http.Request, p httprouter.Params) (interface{}, error) {
-	match := p.ByName("match")
-	b, err := os.ReadFile("logs/" + match)
+	filename := p.ByName("match")
+	b, err := os.ReadFile("logs/" + filename)
 	if err != nil {
 		return nil, err
 	}
 
-	messages := csgo.Parse(string(b))
-	return messages, nil
+	match := csgo.Parse(string(b))
+	return match.Messages(), nil
 }
 
 func getMatchInfo(r *http.Request, p httprouter.Params) (interface{}, error) {
-	ret := struct{
-		Map string `json:"map"`
-		Mode string `json:"mode"`
-	}{}
-	
-	match := p.ByName("match")
-	b, err := os.ReadFile("logs/" + match)
+	filename := p.ByName("match")
+	b, err := os.ReadFile("logs/" + filename)
 	if err != nil {
 		return nil, err
 	}
-	messages := csgo.Parse(string(b))
+	match := csgo.Parse(string(b))
 
-	for _, message := range messages {
-		
-		if message.GetType() == "WorldMatchStart" {
-			message := message.(csgolog.WorldMatchStart)
-			ret.Map = message.Map
-		}
-		if message.GetType() == "GameOver" {
-			message := message.(csgolog.GameOver)
-			ret.Mode = message.Mode
-		}
-	}
-	return ret, nil
+	return match, nil
 }

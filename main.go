@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-const port = 8080
+const port = 8180
 const logdir = "logs/"
 const currentfile = "current"
 const split_marker = "Game Over:"
@@ -94,5 +94,5 @@ func handler() http.Handler {
 }
 
 func main() {
-	http.ListenAndServe(fmt.Sprintf(":%d", port), handler())
+	fmt.Println(http.ListenAndServe(fmt.Sprintf(":%d", port), handler()))
 }
