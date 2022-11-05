@@ -1,10 +1,12 @@
 package csgo
 
 import (
+	"fmt"
 	_ "fmt"
 	"github.com/janstuemmel/csgo-log"
 	"regexp"
 	"strings"
+	"time"
 )
 
 type Player struct {
@@ -57,16 +59,49 @@ func getId(p csgolog.Player) string {
 	return p.SteamID
 }
 
-func Parse(s string) Match {
+func ParseBrief(s string) Match {
+	start := time.Now()
+	ret := Match{}
+	csgolog.LogLinePattern = regexp.MustCompile(`(\d{2}\/\d{2}\/\d{4} - \d{2}:\d{2}:\d{2}.\d{3}) - (.*)`)
 
+	patterns := map[*regexp.Regexp]csgolog.MessageFunc{
+		regexp.MustCompile(csgolog.WorldMatchStartPattern): csgolog.NewWorldMatchStart,
+		regexp.MustCompile(csgolog.TeamNoticePattern):      csgolog.NewTeamNotice,
+	}
+
+	for _, line := range strings.Split(strings.TrimSpace(s), "\n") {
+		msg, err := csgolog.ParseWithPatterns(line, patterns)
+		if err != nil {
+			//fmt.Println(err)
+			continue
+		}
+		switch msg.GetType() {
+		case "WorldMatchStart":
+			msg := msg.(csgolog.WorldMatchStart)
+			ret.Map = msg.Map
+		case "TeamNotice":
+			msg := msg.(csgolog.TeamNotice)
+			ret.CT_Score = msg.ScoreCT
+			ret.T_Score = msg.ScoreT
+		}
+	}
+	duration := time.Since(start)
+	fmt.Printf("Did ParseBrief, in: %s\n", duration)
+	return ret
+}
+
+func Parse(s string) Match {
+	start := time.Now()
 	ret := Match{}
 	ret.Players = []Player{}
 
 	// Default regexp looked slightly different than logs
 	csgolog.LogLinePattern = regexp.MustCompile(`(\d{2}\/\d{2}\/\d{4} - \d{2}:\d{2}:\d{2}.\d{3}) - (.*)`)
 
+	patterns := csgolog.DefaultPatterns
+
 	for _, line := range strings.Split(strings.TrimSpace(s), "\n") {
-		msg, err := csgolog.Parse(line)
+		msg, err := csgolog.ParseWithPatterns(line, patterns)
 		if err != nil {
 			//fmt.Println(err)
 			continue
@@ -133,7 +168,9 @@ func Parse(s string) Match {
 			}
 		}
 
-
 	}
+	duration := time.Since(start)
+	fmt.Printf("Did Parse, in: %s\n", duration)
+
 	return ret
 }

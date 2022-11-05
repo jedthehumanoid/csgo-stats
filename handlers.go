@@ -5,22 +5,23 @@ import (
 	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"io/ioutil"
-	"strings"
 	"net/http"
 	"os"
+	"strings"
+	"time"
 )
 
 // getMatches returns list of saved matches
 func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
-	type mapInfo struct{
-		Map string `json:"map"`
+	start := time.Now()
+	type mapInfo struct {
+		Map      string `json:"map"`
 		Filename string `json:"filename"`
-		CT_Score int `json:"ct_score"`
-		T_Score int `json:"t_score"`
+		CT_Score int    `json:"ct_score"`
+		T_Score  int    `json:"t_score"`
 	}
 
 	ret := []mapInfo{}
-		
 
 	files, err := ioutil.ReadDir("logs")
 	if err != nil {
@@ -34,11 +35,13 @@ func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
 				return nil, err
 			}
 
-			match := csgo.Parse(string(b))
+			match := csgo.ParseBrief(string(b))
 			ret = append(ret, mapInfo{match.Map, f.Name(), match.CT_Score, match.T_Score})
 		}
 	}
 
+	duration := time.Since(start)
+	fmt.Printf("Total: %s\n", duration)
 	return ret, nil
 }
 
