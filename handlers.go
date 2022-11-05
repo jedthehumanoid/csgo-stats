@@ -4,11 +4,11 @@ import (
 	"csgo-stats/csgo"
 	"fmt"
 	"github.com/julienschmidt/httprouter"
-	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
 	"time"
+	"sort"
 )
 
 // getMatches returns list of saved matches
@@ -23,10 +23,14 @@ func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
 
 	ret := []mapInfo{}
 
-	files, err := ioutil.ReadDir("logs")
+	files, err := os.ReadDir("logs")
 	if err != nil {
 		return nil, err
 	}
+
+	sort.Slice(files, func(i, j int) bool {
+		return files[i].Name() > files[j].Name()
+	})
 
 	for _, f := range files {
 		if !strings.HasSuffix(f.Name(), "-current") && f.Name() != ".gitkeep" {
