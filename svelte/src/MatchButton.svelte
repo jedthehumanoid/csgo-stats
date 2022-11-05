@@ -1,6 +1,17 @@
 <script>
   export let match;
   export let selected = false;
+
+  function getDate(name) {
+          console.log(name)
+          let date = name.split("t")[0]
+          date = date.split("-").slice(1).join("-")
+          let time = name.split("t")[1]
+          time = time.split("-").slice(0,-1).join(":")
+          console.log(date, time)
+          return `${date} ${time}`
+  }
+
 </script>
 
 <div on:click on:keypress class="match {selected ? 'selected' : ''}">
@@ -11,11 +22,7 @@
       >
       <td
         ><span class="ct">{match.ct_score}</span> -
-        <span class="terrorist">{match.t_score}</span><br />{match.filename
-          .split("-")
-          .slice(1)
-          .join("-")
-          .slice(0, 10)}</td
+        <span class="terrorist">{match.t_score}</span><br />{getDate(match.filename)}</td
       >
     </tr>
   </table>

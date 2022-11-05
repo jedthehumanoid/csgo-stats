@@ -25,6 +25,16 @@
       .filter((player) => player.Team === team)
       .sort((a, b) => (a.Score < b.Score ? 1 : -1));
   }
+
+  function getDate(name) {
+          console.log(name)
+          let date = name.split("t")[0]
+          date = date.split("-").slice(1).join("-")
+          let time = name.split("t")[1]
+          time = time.split("-").slice(0,-1).join(":")
+          console.log(date, time)
+          return `${date} ${time}`
+  }
 </script>
 
 <main><div id="navigation">
@@ -52,7 +62,7 @@
         <tr
           ><td class="center">{matchinfo.map}</td><td class="center">{matchinfo.Duration} minutes</td><td
             class="center"
-            >{selected.split("-").slice(1).join("-").slice(0, 10)}</td
+            >{getDate(selected)}</td
           ></tr
         >
       </table>
