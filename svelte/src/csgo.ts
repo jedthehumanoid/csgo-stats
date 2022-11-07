@@ -6,6 +6,10 @@
     deaths: number;
   };
 
+type Round = {
+  side: string;
+  notice: string;
+}
   export type MatchInfo = {
     filename: string;
     map: string;
@@ -15,6 +19,7 @@
     players_t: Player[];
     score_ct: number;
     score_t: number;
+    rounds: Round[];
   };
 
   export type MatchBrief = {

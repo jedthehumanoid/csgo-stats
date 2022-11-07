@@ -76,8 +76,8 @@ func getMatchInfo(r *http.Request, p httprouter.Params) (interface{}, error) {
 
 	matchinfo.Filename = filename
 
-	fmt.Println(toJSONPretty(match))
-	fmt.Println(toJSONPretty(matchinfo))
+	//fmt.Println(toJSONPretty(match))
+	//fmt.Println(toJSONPretty(matchinfo))
 
 	return matchinfo, nil
 }

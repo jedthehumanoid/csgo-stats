@@ -24,6 +24,11 @@ type Player struct {
 	BegunDefuse bool
 }
 
+type Round struct {
+	Side   string `json:"side"`
+	Notice string `json:"notice"`
+}
+
 // Match contains match info while parsing
 type Match struct {
 	messages []csgolog.Message
@@ -34,6 +39,8 @@ type Match struct {
 	T_Score  int
 	CT_Score int
 	Duration int
+	Rounds   []Round
+	Switches int
 }
 
 // PlayerInfo contains player info returned from API
@@ -66,6 +73,7 @@ type MatchInfo struct {
 	Duration  int          `json:"duration"`
 	PlayersCT []PlayerInfo `json:"players_ct"`
 	PlayersT  []PlayerInfo `json:"players_t"`
+	Rounds    []Round      `json:"rounds"`
 }
 
 func (match *Match) Messages() []csgolog.Message {
@@ -99,6 +107,20 @@ func (match *Match) TeamAlive(team string) bool {
 		}
 	}
 	return false
+}
+
+func (match *Match) SwitchTeams() {
+	fmt.Println("Switching teams!")
+	for i, round := range match.Rounds {
+		if round.Side == "CT" {
+			fmt.Println("changing to terrorist")
+			match.Rounds[i].Side = "TERRORIST"
+		} else {
+			fmt.Println("changing to ct")
+			match.Rounds[i].Side = "CT"
+		}
+	}
+	match.Rounds = append(match.Rounds, Round{"", "halftime"})
 }
 
 func getId(p csgolog.Player) string {
@@ -157,6 +179,7 @@ func Parse(s string) Match {
 		regexp.MustCompile(csgolog.FreezTimeStartPattern):        csgolog.NewFreezTimeStart,
 		regexp.MustCompile(csgolog.PlayerBombPlantedPattern):     csgolog.NewPlayerBombPlanted,
 		regexp.MustCompile(csgolog.PlayerBombBeginDefusePattern): csgolog.NewPlayerBombBeginDefuse,
+		regexp.MustCompile(csgolog.TeamScoredPattern):            csgolog.NewTeamScored,
 	}
 
 	for _, line := range strings.Split(strings.TrimSpace(s), "\n") {
@@ -179,6 +202,7 @@ func Parse(s string) Match {
 			msg := msg.(csgolog.WorldMatchStart)
 			match.Map = msg.Map
 			match.Time = msg.Time
+			match.Rounds = []Round{}
 			for i := range match.Players {
 				match.Players[i].Kills = 0
 				match.Players[i].Deaths = 0
@@ -191,6 +215,10 @@ func Parse(s string) Match {
 			msg := msg.(csgolog.GameOver)
 			match.Mode = msg.Mode
 			match.Duration = msg.Duration
+
+		//case "TeamScored":
+		//msg := msg.(csgolog.TeamScored)
+		//fmt.Printf("teamscored: side: %s, score: %d, numplayers: %d\n", msg.Side, msg.Score, msg.NumPlayers)
 
 		// PlayerPickerUp seems to trigger for every player, so using this for listening for players
 		case "PlayerPickedUp":
@@ -206,9 +234,26 @@ func Parse(s string) Match {
 					match.Players[i].Team = msg.To
 				}
 			}
+			match.Switches++
 
 		case "TeamNotice":
 			msg := msg.(csgolog.TeamNotice)
+			fmt.Printf("teamnotice: side: %s, notice: %s\n", msg.Side, msg.Notice)
+
+			round := Round{}
+			round.Side = msg.Side
+
+			switch msg.Notice {
+			case "SFUI_Notice_Bomb_Defused":
+				round.Notice = "defused"
+			case "SFUI_Notice_Target_Bombed":
+				round.Notice = "bombed"
+			default:
+				round.Notice = "won"
+			}
+
+			match.Rounds = append(match.Rounds, round)
+
 			match.CT_Score = msg.ScoreCT
 			match.T_Score = msg.ScoreT
 			if msg.Notice == "SFUI_Notice_Target_Bombed" {
@@ -227,11 +272,16 @@ func Parse(s string) Match {
 			}
 
 		case "FreezTimeStart":
+			if match.Switches > 4 {
+				match.SwitchTeams()
+			}
 			for i := range match.Players {
 				match.Players[i].Alive = true
 				match.Players[i].BombPlanter = false
 				match.Players[i].BegunDefuse = false
 			}
+			match.Switches = 0
+			fmt.Println("freeztime")
 
 		case "PlayerKill":
 			msg := msg.(csgolog.PlayerKill)
@@ -299,6 +349,7 @@ func (match *Match) Info() MatchInfo {
 	matchinfo.ScoreCT = match.CT_Score
 	matchinfo.ScoreT = match.T_Score
 	matchinfo.Time = match.Time
+	matchinfo.Rounds = match.Rounds
 
 	players_ct := []Player{}
 	players_t := []Player{}

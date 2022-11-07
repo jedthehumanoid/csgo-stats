@@ -1,6 +1,6 @@
 <script lang="ts">
   export let match: MatchBrief;
-  export let selected = false;
+  export let selected: boolean = false;
 
   import type { MatchBrief } from "./csgo";
 </script>

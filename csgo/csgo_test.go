@@ -132,7 +132,7 @@ func TestParseInfo(t *testing.T) {
 				//	failed = true
 				//}
 			}
-			//fmt.Println(ToJSONPretty(result))
+			fmt.Println(ToJSONPretty(result))
 			if !failed {
 				// Compare everything in case I missed something, hard to parse output
 				//	if ToJSONPretty(result) != ToJSONPretty(expected) {
