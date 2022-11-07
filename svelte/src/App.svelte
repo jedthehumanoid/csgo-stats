@@ -1,8 +1,36 @@
-<script>
+<script lang="ts">
   import MatchButton from "./MatchButton.svelte";
+
+  type Player = {
+    name: string;
+    kills: number;
+    assists: number;
+    deaths: number;
+  }
+
+  type MatchInfo = {
+    filename: string;
+    map: string;
+    duration: number;
+    players_ct: Player[];
+    players_t: Player[];
+    score_ct: number;
+    score_t: number;
+  }
+
   let matches = [];
-  let matchinfo = {};
+  let matchinfo: MatchInfo = {
+    filename: "",
+    map: "",
+    duration: 0,
+    players_ct: [],
+    players_t: [],
+    score_ct: 0,
+    score_t: 0,
+  };
   let selected = "";
+
+
 
   fetch(`/api/matches`).then((response) => {
     response.json().then((json) => {
@@ -10,7 +38,7 @@
     });
   });
 
-  function selectMatch(m) {
+  function selectMatch(m: string) {
     selected = m;
     fetch(`/api/match/${m}/info`).then((response) => {
       response.json().then((json) => {
@@ -20,13 +48,7 @@
     });
   }
 
-  function sortPlayers(players, team) {
-    return players
-      .filter((player) => player.Team === team)
-      .sort((a, b) => (a.Score < b.Score ? 1 : -1));
-  }
-
-  function getDate(name) {
+  function getDate(name:string): string{
     console.log(name);
     let date = name.split("t")[0];
     date = date.split("-").slice(1).join("-");
@@ -74,7 +96,6 @@
           <th /><th style="width: 20em;" /><th style="width: 3em;">K</th><th
             style="width: 3em;">A</th
           ><th style="width: 3em;">D</th>
-          <th style="width: 3em;">Score</th>
         </tr>
         <tr class="ct"
           ><td class="tableside" rowspan={matchinfo.players_ct.length + 1}
@@ -86,7 +107,6 @@
             <td>{player.name}</td><td class="center">{player.kills}</td><td
               class="center">{player.assists}</td
             ><td class="center">{player.deaths}</td>
-            <td class="center">{player.score}</td>
           </tr>
         {/each}
         <tr class="terrorist">
@@ -99,7 +119,6 @@
             <td>{player.name}</td><td class="center">{player.kills}</td><td
               class="center">{player.assists}</td
             ><td class="center">{player.deaths}</td>
-            <td class="center">{player.score}</td>
           </tr>
         {/each}
       </table>
