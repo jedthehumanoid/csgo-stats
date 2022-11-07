@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// Player contains player info while parsing
 type Player struct {
 	Id          string
 	Name        string
@@ -22,6 +23,7 @@ type Player struct {
 	BegunDefuse bool
 }
 
+// Match contains match info while parsing
 type Match struct {
 	messages []csgolog.Message
 	Map      string
@@ -32,15 +34,17 @@ type Match struct {
 	Duration int
 }
 
+// PlayerInfo contains player info returned from API
 type PlayerInfo struct {
 	Name    string `json:"name"`
 	Kills   int    `json:"kills"`
 	Assists int    `json:"assists"`
 	Deaths  int    `json:"deaths"`
-	MVPS    int    `json:"-"`
-	Score   int    `json:"-"`
 }
 
+// MatchBrief contains brief match info returned from API
+// This is produced without a full parse and can be used
+// when listing matches
 type MatchBrief struct {
 	Map      string `json:"map"`
 	Filename string `json:"filename"`
@@ -48,6 +52,7 @@ type MatchBrief struct {
 	ScoreT   int    `json:"score_t"`
 }
 
+// Matchinfo contains full match info returned from API
 type MatchInfo struct {
 	Map       string       `json:"map"`
 	Mode      string       `json:"mode"`
@@ -166,7 +171,6 @@ func Parse(s string) Match {
 			}
 
 		case "WorldMatchStart":
-			fmt.Println("---match start---")
 			msg := msg.(csgolog.WorldMatchStart)
 			match.Map = msg.Map
 			for i := range match.Players {
@@ -176,15 +180,12 @@ func Parse(s string) Match {
 				match.Players[i].Score = 0
 				match.Players[i].Alive = true
 			}
-			
 
 		case "GameOver":
-			fmt.Println("--- game over ---")
 			msg := msg.(csgolog.GameOver)
 			match.Mode = msg.Mode
 			match.Duration = msg.Duration
 			
-
 		// PlayerPickerUp seems to trigger for every player, so using this for listening for players
 		case "PlayerPickedUp":
 			msg := msg.(csgolog.PlayerPickedUp)
@@ -292,27 +293,43 @@ func (match *Match) Info() MatchInfo {
 	matchinfo.ScoreCT = match.CT_Score
 	matchinfo.ScoreT = match.T_Score
 
+	players_ct := []Player{}
+	players_t := []Player{}
+
 	for _, player := range match.Players {
+		if player.Team == "CT" {
+			players_ct = append(players_ct, player)
+		}
+		if player.Team == "TERRORIST" {
+			players_t = append(players_t, player)
+		}
+	}
+
+	sort.Slice(players_ct, func(i, j int) bool {
+		return players_ct[i].Score > players_ct[j].Score
+	})
+
+	sort.Slice(players_t, func(i, j int) bool {
+		return players_t[i].Score > players_t[j].Score
+	})
+
+	for _, player := range players_ct {
 		playerinfo := PlayerInfo{}
 		playerinfo.Name = player.Name
 		playerinfo.Kills = player.Kills
 		playerinfo.Deaths = player.Deaths
 		playerinfo.Assists = player.Assists
-		playerinfo.Score = player.Score
-
-		if player.Team == "CT" {
-			matchinfo.PlayersCT = append(matchinfo.PlayersCT, playerinfo)
-		} else if player.Team == "TERRORIST" {
-			matchinfo.PlayersT = append(matchinfo.PlayersT, playerinfo)
-		}
+		matchinfo.PlayersCT = append(matchinfo.PlayersCT, playerinfo)
 	}
 
-	sort.Slice(matchinfo.PlayersCT, func(i, j int) bool {
-		return matchinfo.PlayersCT[i].Score > matchinfo.PlayersCT[j].Score
-	})
-	sort.Slice(matchinfo.PlayersT, func(i, j int) bool {
-		return matchinfo.PlayersT[i].Score > matchinfo.PlayersT[j].Score
-	})
+	for _, player := range players_t {
+		playerinfo := PlayerInfo{}
+		playerinfo.Name = player.Name
+		playerinfo.Kills = player.Kills
+		playerinfo.Deaths = player.Deaths
+		playerinfo.Assists = player.Assists
+		matchinfo.PlayersT = append(matchinfo.PlayersT, playerinfo)
+	}
 
 	return matchinfo
 }

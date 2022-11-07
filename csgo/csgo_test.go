@@ -7,6 +7,10 @@ import (
 	"testing"
 )
 
+func TestHej(t *testing.T) {
+	fmt.Println("hHHHEJ")
+}
+
 func TestParseInfo(t *testing.T) {
 	var tests = []struct {
 		filename string
@@ -17,6 +21,7 @@ func TestParseInfo(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.filename, func(t *testing.T) {
 			fmt.Printf("<<< %s >>>\n", tt.filename)
+
 			failed := false
 			b, err := ioutil.ReadFile(tt.filename)
 			if err != nil {
@@ -127,7 +132,7 @@ func TestParseInfo(t *testing.T) {
 				//	failed = true
 				//}
 			}
-			//fmt.Println(ToJSONPretty(result.PlayersT))
+			//fmt.Println(ToJSONPretty(result))
 			if !failed {
 				// Compare everything in case I missed something, hard to parse output
 				//	if ToJSONPretty(result) != ToJSONPretty(expected) {
