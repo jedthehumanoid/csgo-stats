@@ -1,16 +1,8 @@
-<script>
-  export let match;
+<script lang="ts">
+  export let match: MatchBrief;
   export let selected = false;
 
-  function getDate(name) {
-    console.log(name);
-    let date = name.split("t")[0];
-    date = date.split("-").slice(1).join("-");
-    let time = name.split("t")[1];
-    time = time.split("-").slice(0, -1).join(":");
-    console.log(date, time);
-    return `${date} ${time}`;
-  }
+  import type { MatchBrief } from "./csgo";
 </script>
 
 <div on:click on:keypress class="match {selected ? 'selected' : ''}">
@@ -21,9 +13,9 @@
       >
       <td
         ><span class="ct">{match.score_ct}</span> -
-        <span class="terrorist">{match.score_t}</span><br />{getDate(
-          match.filename
-        )}</td
+        <span class="terrorist">{match.score_t}</span><br />{match.time
+          .slice(0, 16)
+          .replace("T", " ")}</td
       >
     </tr>
   </table>

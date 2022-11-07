@@ -1,36 +1,22 @@
 <script lang="ts">
   import MatchButton from "./MatchButton.svelte";
+  import type { MatchInfo, MatchBrief } from "./csgo";
 
-  type Player = {
-    name: string;
-    kills: number;
-    assists: number;
-    deaths: number;
-  }
+  let matches: MatchBrief[] = [];
 
-  type MatchInfo = {
-    filename: string;
-    map: string;
-    duration: number;
-    players_ct: Player[];
-    players_t: Player[];
-    score_ct: number;
-    score_t: number;
-  }
-
-  let matches = [];
   let matchinfo: MatchInfo = {
     filename: "",
     map: "",
+    time: "",
     duration: 0,
     players_ct: [],
     players_t: [],
     score_ct: 0,
     score_t: 0,
   };
-  let selected = "";
 
-
+  let selected: string = "";
+  let page: number = 0;
 
   fetch(`/api/matches`).then((response) => {
     response.json().then((json) => {
@@ -43,25 +29,14 @@
     fetch(`/api/match/${m}/info`).then((response) => {
       response.json().then((json) => {
         matchinfo = json;
-        console.log(matchinfo);
       });
     });
-  }
-
-  function getDate(name:string): string{
-    console.log(name);
-    let date = name.split("t")[0];
-    date = date.split("-").slice(1).join("-");
-    let time = name.split("t")[1];
-    time = time.split("-").slice(0, -1).join(":");
-    console.log(date, time);
-    return `${date} ${time}`;
   }
 </script>
 
 <main>
   <div id="navigation">
-    {#each matches as match}
+    {#each matches.slice(page * 15, (page + 1) * 15) as match}
       <MatchButton
         {match}
         selected={match.filename === selected}
@@ -69,6 +44,7 @@
         on:keypress={() => selectMatch(match.filename)}
       />
     {/each}
+    <span on:click={() => page++}>more...</span>
   </div>
   <span style="opacity:0;">Why do i need this?</span>
   <div id="main">
@@ -87,7 +63,9 @@
         <tr
           ><td class="center">{matchinfo.map}</td><td class="center"
             >{matchinfo.duration} minutes</td
-          ><td class="center">{getDate(selected)}</td></tr
+          ><td class="center"
+            >{matchinfo.time.slice(0, 16).replace("T", " ")}</td
+          ></tr
         >
       </table>
 

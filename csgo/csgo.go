@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"time"
 )
 
 // Player contains player info while parsing
@@ -28,6 +29,7 @@ type Match struct {
 	messages []csgolog.Message
 	Map      string
 	Mode     string
+	Time     time.Time
 	Players  []Player
 	T_Score  int
 	CT_Score int
@@ -46,16 +48,18 @@ type PlayerInfo struct {
 // This is produced without a full parse and can be used
 // when listing matches
 type MatchBrief struct {
-	Map      string `json:"map"`
-	Filename string `json:"filename"`
-	ScoreCT  int    `json:"score_ct"`
-	ScoreT   int    `json:"score_t"`
+	Map      string    `json:"map"`
+	Filename string    `json:"filename"`
+	Time     time.Time `json:"time"`
+	ScoreCT  int       `json:"score_ct"`
+	ScoreT   int       `json:"score_t"`
 }
 
 // Matchinfo contains full match info returned from API
 type MatchInfo struct {
 	Map       string       `json:"map"`
 	Mode      string       `json:"mode"`
+	Time      time.Time    `json:"time"`
 	Filename  string       `json:"filename"`
 	ScoreCT   int          `json:"score_ct"`
 	ScoreT    int          `json:"score_t"`
@@ -124,6 +128,7 @@ func ParseBrief(s string) MatchBrief {
 		case "WorldMatchStart":
 			msg := msg.(csgolog.WorldMatchStart)
 			ret.Map = msg.Map
+			ret.Time = msg.Time
 		case "TeamNotice":
 			msg := msg.(csgolog.TeamNotice)
 			ret.ScoreCT = msg.ScoreCT
@@ -173,6 +178,7 @@ func Parse(s string) Match {
 		case "WorldMatchStart":
 			msg := msg.(csgolog.WorldMatchStart)
 			match.Map = msg.Map
+			match.Time = msg.Time
 			for i := range match.Players {
 				match.Players[i].Kills = 0
 				match.Players[i].Deaths = 0
@@ -185,7 +191,7 @@ func Parse(s string) Match {
 			msg := msg.(csgolog.GameOver)
 			match.Mode = msg.Mode
 			match.Duration = msg.Duration
-			
+
 		// PlayerPickerUp seems to trigger for every player, so using this for listening for players
 		case "PlayerPickedUp":
 			msg := msg.(csgolog.PlayerPickedUp)
@@ -213,7 +219,7 @@ func Parse(s string) Match {
 					} else if player.BombPlanter {
 						// Planter dead
 						match.Players[i].Score += 1
-					} else if player.Team == "TERRORIST" && player.Alive{
+					} else if player.Team == "TERRORIST" && player.Alive {
 						// Rest of living terrorists
 						match.Players[i].Score += 1
 					}
@@ -292,6 +298,7 @@ func (match *Match) Info() MatchInfo {
 	matchinfo.Mode = match.Mode
 	matchinfo.ScoreCT = match.CT_Score
 	matchinfo.ScoreT = match.T_Score
+	matchinfo.Time = match.Time
 
 	players_ct := []Player{}
 	players_t := []Player{}
