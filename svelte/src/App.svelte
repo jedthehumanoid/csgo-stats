@@ -27,17 +27,18 @@
   }
 
   function getDate(name) {
-          console.log(name)
-          let date = name.split("t")[0]
-          date = date.split("-").slice(1).join("-")
-          let time = name.split("t")[1]
-          time = time.split("-").slice(0,-1).join(":")
-          console.log(date, time)
-          return `${date} ${time}`
+    console.log(name);
+    let date = name.split("t")[0];
+    date = date.split("-").slice(1).join("-");
+    let time = name.split("t")[1];
+    time = time.split("-").slice(0, -1).join(":");
+    console.log(date, time);
+    return `${date} ${time}`;
   }
 </script>
 
-<main><div id="navigation">
+<main>
+  <div id="navigation">
     {#each matches as match}
       <MatchButton
         {match}
@@ -46,11 +47,13 @@
         on:keypress={() => selectMatch(match.filename)}
       />
     {/each}
-  </div><span style="opacity:0;">Why do i need this?</span> <div id="main">
-    {#if matchinfo.Players}
-    <a href="/api/match/{selected}/json">json</a>
-    <a href="/api/match/{selected}/raw">raw</a>
-    
+  </div>
+  <span style="opacity:0;">Why do i need this?</span>
+  <div id="main">
+    {#if matchinfo.filename}
+      <a href="/api/match/{selected}/json">json</a>
+      <a href="/api/match/{selected}/raw">raw</a>
+
       <table id="infotable">
         <tr
           ><th rowspan="2" class="logo"
@@ -60,10 +63,9 @@
           ><th style="width: 200px;">Date</th></tr
         >
         <tr
-          ><td class="center">{matchinfo.map}</td><td class="center">{matchinfo.Duration} minutes</td><td
-            class="center"
-            >{getDate(selected)}</td
-          ></tr
+          ><td class="center">{matchinfo.map}</td><td class="center"
+            >{matchinfo.duration} minutes</td
+          ><td class="center">{getDate(selected)}</td></tr
         >
       </table>
 
@@ -75,33 +77,29 @@
           <th style="width: 3em;">Score</th>
         </tr>
         <tr class="ct"
-          ><td
-            class="tableside"
-            rowspan={sortPlayers(matchinfo.Players, "CT").length + 1}
-            >CT<br />{matchinfo.CT_Score}</td
+          ><td class="tableside" rowspan={matchinfo.players_ct.length + 1}
+            >CT<br />{matchinfo.score_ct}</td
           ></tr
         >
-        {#each sortPlayers(matchinfo.Players, "CT") as player}
+        {#each matchinfo.players_ct as player}
           <tr class="ct">
-            <td>{player.Name}</td><td class="center">{player.Kills}</td><td
-              class="center">{player.Assists}</td
-            ><td class="center">{player.Deaths}</td>
-            <td class="center">{player.Score}</td>
+            <td>{player.name}</td><td class="center">{player.kills}</td><td
+              class="center">{player.assists}</td
+            ><td class="center">{player.deaths}</td>
+            <td class="center">{player.score}</td>
           </tr>
         {/each}
         <tr class="terrorist">
-          <td
-            class="tableside"
-            rowspan={sortPlayers(matchinfo.Players, "TERRORIST").length + 1}
-            >T<br /> {matchinfo.T_Score}</td
+          <td class="tableside" rowspan={matchinfo.players_t.length + 1}
+            >T<br /> {matchinfo.score_t}</td
           ><td><br /></td>
         </tr>
-        {#each sortPlayers(matchinfo.Players, "TERRORIST") as player}
+        {#each matchinfo.players_t as player}
           <tr class="terrorist">
-            <td>{player.Name}</td><td class="center">{player.Kills}</td><td
-              class="center">{player.Assists}</td
-            ><td class="center">{player.Deaths}</td>
-            <td class="center">{player.Score}</td>
+            <td>{player.name}</td><td class="center">{player.kills}</td><td
+              class="center">{player.assists}</td
+            ><td class="center">{player.deaths}</td>
+            <td class="center">{player.score}</td>
           </tr>
         {/each}
       </table>

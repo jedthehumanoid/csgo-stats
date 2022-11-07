@@ -2,26 +2,18 @@ package main
 
 import (
 	"csgo-stats/csgo"
+	"encoding/json"
 	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"os"
-	"strings"
-	"time"
 	"sort"
+	"strings"
 )
 
 // getMatches returns list of saved matches
 func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
-	start := time.Now()
-	type mapInfo struct {
-		Map      string `json:"map"`
-		Filename string `json:"filename"`
-		CT_Score int    `json:"ct_score"`
-		T_Score  int    `json:"t_score"`
-	}
-
-	ret := []mapInfo{}
+	ret := []csgo.MatchBrief{}
 
 	files, err := os.ReadDir("logs")
 	if err != nil {
@@ -33,19 +25,19 @@ func getMatches(r *http.Request, _ httprouter.Params) (interface{}, error) {
 	})
 
 	for _, f := range files {
-		if !strings.HasSuffix(f.Name(), "-current") && f.Name() != ".gitkeep" {
-			b, err := os.ReadFile("logs/" + f.Name())
+		filename := f.Name()
+		if !strings.HasSuffix(filename, "-current") && filename != ".gitkeep" {
+			b, err := os.ReadFile("logs/" + filename)
 			if err != nil {
 				return nil, err
 			}
 
 			match := csgo.ParseBrief(string(b))
-			ret = append(ret, mapInfo{match.Map, f.Name(), match.CT_Score, match.T_Score})
+			match.Filename = filename
+			ret = append(ret, match)
 		}
 	}
 
-	duration := time.Since(start)
-	fmt.Printf("Total: %s\n", duration)
 	return ret, nil
 }
 
@@ -79,6 +71,17 @@ func getMatchInfo(r *http.Request, p httprouter.Params) (interface{}, error) {
 		return nil, err
 	}
 	match := csgo.Parse(string(b))
+	matchinfo := match.Info()
 
-	return match, nil
+	matchinfo.Filename = filename
+
+	fmt.Println(toJSONPretty(match))
+	fmt.Println(toJSONPretty(matchinfo))
+
+	return matchinfo, nil
+}
+
+func toJSONPretty(i interface{}) string {
+	b, _ := json.MarshalIndent(i, "", "   ")
+	return string(b)
 }
