@@ -64,6 +64,7 @@ func getMatchJSON(r *http.Request, p httprouter.Params) (interface{}, error) {
 	return match.Messages(), nil
 }
 
+// getMatchInfo returns info about match
 func getMatchInfo(r *http.Request, p httprouter.Params) (interface{}, error) {
 	filename := p.ByName("match")
 	b, err := os.ReadFile("logs/" + filename)

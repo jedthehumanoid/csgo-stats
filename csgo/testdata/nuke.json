@@ -1,0 +1,78 @@
+{
+   "map": "de_nuke",
+   "mode": "casual",
+   "filename": "",
+   "score_ct": 9,
+   "score_t": 6,
+   "duration": 23,
+   "players_ct": [
+      {
+         "name": "Hawkaje",
+         "kills": 23,
+         "assists": 4,
+         "deaths": 7
+      },
+       {
+         "name": "ZugZug",
+         "kills": 13,
+         "assists": 1,
+         "deaths": 12
+      },
+      {
+         "name": "jeddy3",
+         "kills": 13,
+         "assists": 0,
+         "deaths": 9
+      },
+      {
+         "name": "nkwvanwieringen",
+         "kills": 7,
+         "assists": 1,
+         "deaths": 10
+      },
+      {
+         "name": "BOT Irving",
+         "kills": 5,
+         "assists": 1,
+         "deaths": 5
+      },
+      {
+         "name": "BOT Alfred",
+         "kills": 2,
+         "assists": 0,
+         "deaths": 0
+      }
+   ],
+   "players_t": [
+      {
+         "name": "Shaegen",
+         "kills": 13,
+         "assists": 2,
+         "deaths": 14
+      },
+      {
+         "name": "Barbis",
+         "kills": 15,
+         "assists": 1,
+         "deaths": 11
+      },
+      {
+         "name": "dalomstornado",
+         "kills": 13,
+         "assists": 1,
+         "deaths": 10
+      },
+      {
+         "name": "BOT Jason",
+         "kills": 1,
+         "assists": 0,
+         "deaths": 11
+      },
+      {
+         "name": "BOT Perry",
+         "kills": 0,
+         "assists": 0,
+         "deaths": 8
+      }
+   ]
+}

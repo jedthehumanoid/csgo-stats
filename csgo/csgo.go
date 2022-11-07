@@ -101,6 +101,8 @@ func getId(p csgolog.Player) string {
 
 func ParseBrief(s string) MatchBrief {
 	ret := MatchBrief{}
+
+	// Default regexp looked slightly different than our logs
 	csgolog.LogLinePattern = regexp.MustCompile(`(\d{2}\/\d{2}\/\d{4} - \d{2}:\d{2}:\d{2}.\d{3}) - (.*)`)
 
 	patterns := map[*regexp.Regexp]csgolog.MessageFunc{
@@ -128,12 +130,11 @@ func ParseBrief(s string) MatchBrief {
 
 func Parse(s string) Match {
 	match := Match{}
-	match.Players = []Player{}
 
-	// Default regexp looked slightly different than logs
+	// Default regexp looked slightly different than our logs
 	csgolog.LogLinePattern = regexp.MustCompile(`(\d{2}\/\d{2}\/\d{4} - \d{2}:\d{2}:\d{2}.\d{3}) - (.*)`)
 
-	//patterns := csgolog.DefaultPatterns
+	// Not using default list of patterns, more patterns makes it slower to parse
 	patterns := map[*regexp.Regexp]csgolog.MessageFunc{
 		regexp.MustCompile(csgolog.WorldMatchStartPattern):       csgolog.NewWorldMatchStart,
 		regexp.MustCompile(csgolog.GameOverPattern):              csgolog.NewGameOver,
@@ -151,7 +152,6 @@ func Parse(s string) Match {
 	for _, line := range strings.Split(strings.TrimSpace(s), "\n") {
 		msg, err := csgolog.ParseWithPatterns(line, patterns)
 		if err != nil {
-			//fmt.Println(err)
 			continue
 		}
 
@@ -166,6 +166,7 @@ func Parse(s string) Match {
 			}
 
 		case "WorldMatchStart":
+			fmt.Println("---match start---")
 			msg := msg.(csgolog.WorldMatchStart)
 			match.Map = msg.Map
 			for i := range match.Players {
@@ -175,13 +176,14 @@ func Parse(s string) Match {
 				match.Players[i].Score = 0
 				match.Players[i].Alive = true
 			}
-			fmt.Println("---match start---")
+			
 
 		case "GameOver":
+			fmt.Println("--- game over ---")
 			msg := msg.(csgolog.GameOver)
 			match.Mode = msg.Mode
 			match.Duration = msg.Duration
-			fmt.Println("--- game over ---")
+			
 
 		// PlayerPickerUp seems to trigger for every player, so using this for listening for players
 		case "PlayerPickedUp":
@@ -205,15 +207,13 @@ func Parse(s string) Match {
 			if msg.Notice == "SFUI_Notice_Target_Bombed" {
 				for i, player := range match.Players {
 					if player.BombPlanter && player.Alive {
-						fmt.Printf("%s planted, and was still alive when bomb exploded!, 2 points!\n", player.Name)
+						// Planter alive
 						match.Players[i].Score += 2
-
 					} else if player.BombPlanter {
-						fmt.Printf("%s planted, bomb exploded, 1 point\n", player.Name)
+						// Planter dead
 						match.Players[i].Score += 1
-
-					} else if player.Team == "TERRORIST" {
-						fmt.Printf("%s was alive when bomb exploded, 1 point\n", player.Name)
+					} else if player.Team == "TERRORIST" && player.Alive{
+						// Rest of living terrorists
 						match.Players[i].Score += 1
 					}
 				}
@@ -225,7 +225,6 @@ func Parse(s string) Match {
 				match.Players[i].BombPlanter = false
 				match.Players[i].BegunDefuse = false
 			}
-			fmt.Println("--- freezetime ---")
 
 		case "PlayerKill":
 			msg := msg.(csgolog.PlayerKill)
@@ -255,11 +254,8 @@ func Parse(s string) Match {
 			msg := msg.(csgolog.PlayerBombDefused)
 			for i, player := range match.Players {
 				if player.Id == getId(msg.Player) && player.Alive {
-					fmt.Printf("%s defused the bomb!, got 2 points!\n", player.Name)
 					match.Players[i].Score += 2
-
 				} else if player.Team == "CT" && player.Alive {
-					fmt.Printf("%s was alive when bomb defused, 1 point\n", player.Name)
 					match.Players[i].Score += 1
 				}
 			}
@@ -268,7 +264,6 @@ func Parse(s string) Match {
 			msg := msg.(csgolog.PlayerBombPlanted)
 			for i, player := range match.Players {
 				if player.Id == getId(msg.Player) && player.Alive {
-					fmt.Printf("%s planted the bomb, 2 points\n", player.Name)
 					match.Players[i].Score += 2
 					match.Players[i].BombPlanter = true
 				}

@@ -1,0 +1,78 @@
+{
+   "map": "de_nuke",
+   "mode": "casual",
+   "filename": "comp-2022-11-06t19-38-16z",
+   "score_ct": 8,
+   "score_t": 8,
+   "duration": 26,
+   "players_ct": [
+      {
+         "name": "thepilot",
+         "kills": 12,
+         "assists": 3,
+         "deaths": 12
+      },
+      {
+         "name": "Barbis",
+         "kills": 12,
+         "assists": 5,
+         "deaths": 12
+      },
+      {
+         "name": "luffarrock",
+         "kills": 10,
+         "assists": 6,
+         "deaths": 11
+      },
+      {
+         "name": "Grillbritt",
+         "kills": 12,
+         "assists": 1,
+         "deaths": 9
+      },
+      {
+         "name": "Shaegen",
+         "kills": 10,
+         "assists": 0,
+         "deaths": 13
+      },
+      {
+         "name": "tslehmosdav",
+         "kills": 2,
+         "assists": 1,
+         "deaths": 10
+      }
+   ],
+   "players_t": [
+      {
+         "name": "jeddy3",
+         "kills": 25,
+         "assists": 1,
+         "deaths": 10
+      },
+      {
+         "name": "ZugZug",
+         "kills": 18,
+         "assists": 2,
+         "deaths": 11
+      },
+      {
+         "name": "dalomstornado",
+         "kills": 14,
+         "assists": 4,
+         "deaths": 13
+      },
+      {
+         "name": "Feffe",
+         "kills": 9,
+         "assists": 2,
+         "deaths": 15
+      },
+      {
+         "name": "nkwvanwieringen",
+         "kills": 2,
+         "assists": 0,
+         "deaths": 10
+      }
+   ]
+}
